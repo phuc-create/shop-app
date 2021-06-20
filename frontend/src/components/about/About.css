@@ -1,0 +1,329 @@
+@import url("https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap");
+.about-p {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  scroll-behavior: smooth;
+}
+
+.about-p .ab-l {
+  position: relative;
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  padding-left: 150px;
+}
+
+.about-p .ab-l .ab-header {
+  padding: 0px 0px 30px 0px;
+  font-size: 20px;
+  background: -webkit-linear-gradient(#8360c3, #2ebf91);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.about-p .ab-l .ab-header .ab-h-rel {
+  color: #8360c3;
+}
+
+.about-p .ab-l .ab_line-on {
+  margin-top: 100px;
+  padding: 10px 0px;
+  color: #2ebf91;
+  text-decoration: overline;
+}
+
+.about-p .ab-l h1 {
+  font-size: 40px;
+  letter-spacing: 1px;
+  line-height: 65px;
+  padding: 0px 0px 25px 0px;
+}
+
+.about-p .ab-l h1 .hl-word {
+  color: #8360c3;
+}
+
+.about-p .ab-l .ab-bot {
+  font-family: "Odibee Sans", cursive;
+  position: relative;
+  font-size: 20px;
+  line-height: 30px;
+  letter-spacing: 1px;
+}
+
+.about-p .ab-l .ab-more {
+  padding: 15px 0px;
+  width: 150px;
+  font-family: "Odibee Sans", cursive;
+  font-size: 20px;
+  color: #2ebf91;
+  background: #34495e;
+  text-align: center;
+  border-radius: 5px;
+  transition: 0.3s;
+  margin-top: 10px;
+}
+
+.about-p .ab-l .ab-more:hover {
+  letter-spacing: 2px;
+}
+
+.about-p .ab-r {
+  position: relative;
+  width: 55%;
+}
+
+.about-p .ab-r img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  position: relative;
+}
+
+.about-p .ab-r .abs-bot {
+  position: absolute;
+  bottom: 20%;
+  right: 33%;
+  width: 280px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.about-p .ab-r .abs-bot span {
+  margin: 5px 0;
+  letter-spacing: 2px;
+  font-size: 20px;
+}
+
+.about-p .ab-r .abs-bot span:nth-child(1) {
+  font-weight: bold;
+}
+
+.about-p .ab-r .abs-bot span:nth-child(2) {
+  color: #e74c3c;
+}
+
+.about-p .ab-r .abs-bot span:nth-child(3) {
+  color: #1abc9c;
+}
+.about {
+  margin-top: 20px;
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  flex-direction: column;
+}
+.about .header-ab {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  margin-bottom: 50px;
+}
+
+.about .header-ab .p1-white,
+.about .header-ab .p2-img {
+  position: relative;
+  width: 100%;
+}
+
+.about .header-ab .p1-white {
+  position: absolute;
+  height: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about .header-ab .p1-white button {
+  width: 50%;
+  letter-spacing: 15px;
+  height: auto;
+
+  font-size: 80px;
+  background: #fff;
+  color: #000;
+  border: none;
+  font-weight: 900;
+  outline: none;
+  border-radius: 10px;
+  z-index: 1;
+}
+
+.about .header-ab .p2-img {
+  height: 60%;
+}
+.about .header-ab .p2-img img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  background-size: 50%;
+  animation: turssnLeft 0.5s forwards;
+  z-index: 2;
+}
+.about .ab-infor {
+  position: relative;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  max-width: 1200px;
+}
+.about .ab-infor h1.whoweare {
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 10px;
+  margin-top: 20px;
+  padding: 20px 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.3);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.about .ab-infor .ab__infor-wrapper {
+  position: relative;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+
+  align-items: flex-start;
+  margin: 20px 0px 50px 0px;
+}
+.about .ab-infor .ab__infor-wrapper .ab__infor--content,
+.about .ab-infor .ab__infor-wrapper .ab__infor--social {
+  width: 50%;
+  position: relative;
+}
+
+.about .ab-infor .ab__infor-wrapper .ab__infor--content h1 {
+  text-transform: capitalize;
+  word-break: break-word;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+
+.about .ab-infor .ab__infor-wrapper .ab__infor--content p {
+  word-break: break-word;
+  line-height: 35px;
+  font-size: 17px;
+  margin-bottom: 5px;
+}
+.about .ab-infor .ab__infor-wrapper .ab__infor--social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.about .ab-infor .ab__infor-wrapper .ab__infor--social button {
+  padding: 12px;
+  width: 55%;
+  border: 2px solid #333;
+  background: none;
+  outline: none;
+  text-transform: uppercase;
+  font-size: 17px;
+}
+.about .ab-infor .ab__infor-wrapper .ab__infor--social span {
+  margin: 15px 0;
+  font-size: 17px;
+  color: #1abc9c;
+  text-transform: capitalize;
+}
+
+.about .ab-infor .ab__infor-wrapper .ab__infor--social .__social {
+  position: relative;
+  border: 1px solid;
+  color: #fff;
+  background: #000;
+  display: flex;
+  flex-wrap: wrap;
+  width: 400px;
+}
+.ab__infor--social .__social .icon {
+  width: calc(100% / 4);
+  height: 100px;
+  display: flex;
+  background: transparent;
+  justify-content: center;
+  font-size: 25px;
+  align-items: center;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.ab__infor--social .__social .icon:hover {
+  background: #95a5a6;
+}
+.about .tempo {
+  max-width: 1400px;
+  height: auto;
+  position: relative;
+}
+.about .tempo .intro {
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-bottom: 50px;
+}
+
+.about .tempo .intro img {
+  width: 40%;
+  padding: 20px;
+  border: 3px solid #333;
+  height: auto;
+}
+
+.about .tempo .intro .sign-txt {
+  width: 60%;
+  padding: 120px 40px 0px 40px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.about .tempo .intro .sign-txt h1 {
+  font-size: 20px;
+  width: 100%;
+  text-align: left;
+  text-transform: capitalize;
+}
+.about .tempo .intro .sign-txt p {
+  width: 100%;
+  font-size: 17px;
+  word-break: break-all;
+  line-height: 40px;
+  margin-bottom: 20px;
+}
+.about .tempo .intro .sign-txt span {
+  width: 100%;
+  font-size: 30px;
+  text-align: right;
+  margin-bottom: 10px;
+  font-family: "Alex Brush", cursive;
+  color: #34495e;
+  border-bottom: 2px solid;
+}
+
+.about .ft-about {
+  text-align: center;
+  font-size: 30px;
+  text-transform: uppercase;
+  color: #34495e;
+  letter-spacing: 2px;
+  margin: 30px 0;
+}

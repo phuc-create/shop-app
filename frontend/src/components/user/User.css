@@ -1,0 +1,381 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+.user-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.user-wrapper .user {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 1400px;
+  height: 100%;
+  position: relative;
+}
+.user-wrapper .user .user__infor {
+  position: relative;
+  width: 40%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ecf0f1;
+  border-radius: 5px;
+  box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.3);
+  margin-left: 20px;
+}
+.user-wrapper .user .user__infor .user__infor--bx {
+  width: 95%;
+  height: auto;
+  position: relative;
+  text-align: left;
+  padding: 10px;
+}
+.user-wrapper .user .user__infor .user__infor--bx .title-infor {
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 10px;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  color: #2c3e50;
+}
+.user-wrapper .user .user__infor .user__infor--bx .__infor {
+  line-height: 22px;
+  margin-bottom: 15px;
+  font-size: 17px;
+  color: #2c3e50;
+  display: flex;
+  flex-direction: column;
+}
+.user-wrapper .user .user__infor .user__infor--bx .__infor.fm__input {
+  border: 1px solid #bdc3c7;
+  padding: 10px;
+  border-radius: 5px;
+}
+.user-wrapper .user .user__infor .user__infor--bx .__infor.picture {
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.user-wrapper .user .user__infor .user__infor--bx .__infor.picture img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-position: center;
+  background-size: cover;
+}
+.user-wrapper .user .user__infor .user__infor--bx .__infor .user--edit-infor {
+  width: 100%;
+  padding: 10px;
+  letter-spacing: 1px;
+  background: #333;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 5px;
+}
+.user-wrapper .user .user__orders {
+  width: 59%;
+  height: 100%;
+  position: relative;
+}
+.user-wrapper .user .user__orders table {
+  width: 100%;
+  padding: 20px;
+}
+.user-wrapper .user .user__orders table tr.__orders--header {
+  text-align: left;
+  font-size: 25px;
+  letter-spacing: 1px;
+  color: #2c3e50;
+  padding-bottom: 20px;
+}
+.user-wrapper .user .user__orders table tr.__orders--view {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+  margin-bottom: 20px;
+  padding: 10px 20px;
+}
+.user-wrapper .user .user__orders table tr.__orders--view td {
+  padding: 2px 0px;
+  font-size: 18px;
+  font-weight: 300;
+}
+.user-wrapper .user .user__orders table tr.__orders--view td.od--flex-bw {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.user-wrapper .user .user__orders table tr.__orders--view td .__order--result {
+  color: #c0392b;
+}
+.user-wrapper .user .user__orders table tr.__orders--view td .__order--status {
+  color: #2ecc71;
+}
+.user-wrapper
+  .user
+  .user__orders
+  table
+  tr.__orders--view
+  td
+  button.vw-detail-order {
+  width: 100%;
+  height: auto;
+  padding: 8px;
+  background: linear-gradient(to left, #34495e, #434343);
+  color: #fff;
+  font-size: 18px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+.user-wrapper .order-details {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: none;
+  z-index: -100000;
+}
+.user-wrapper .order-details.overlay {
+  z-index: unset;
+  background: rgba(0, 0, 0, 0.3);
+}
+.user-wrapper .order-details .details {
+  min-width: 750px;
+  height: 100%;
+  background: #fff;
+  position: absolute;
+  right: -100%;
+  top: 0;
+  transition: 0.4s;
+  padding: 25px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  z-index: unset;
+}
+.user-wrapper .order-details .details .order--id {
+  font-size: 30px;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+.user-wrapper .order-details .details .order-date {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  font-size: 17px;
+}
+.user-wrapper .order-details .details .order-date .order-status .__status {
+  color: #2ecc71;
+}
+.user-wrapper .order-details .details .products--list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border-radius: 7px;
+  box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.4);
+  padding: 5px 15px 15px 15px;
+}
+.user-wrapper .order-details .details .products--list .order--header {
+  width: 100%;
+  border-bottom: 1px solid #333;
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+.user-wrapper .order-details .details .products--list .__list-single {
+  width: 100%;
+  height: auto;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+.user-wrapper
+  .order-details
+  .details
+  .products--list
+  .__list-single
+  .__list-single-img {
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.user-wrapper
+  .order-details
+  .details
+  .products--list
+  .__list-single
+  .__list-single-img
+  img {
+  width: 100px;
+  height: 100px;
+  background-size: cover;
+  border-radius: 7px;
+}
+.user-wrapper
+  .order-details
+  .details
+  .products--list
+  .__list-single
+  .__list-single-img
+  .__list-np {
+  position: relative;
+}
+.user-wrapper
+  .order-details
+  .details
+  .products--list
+  .__list-single
+  .__list-single-img
+  .__list-np
+  p.lname {
+  text-transform: capitalize;
+  margin-bottom: 10px;
+  font-size: 18px;
+  letter-spacing: 1px;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+.user-wrapper
+  .order-details
+  .details
+  .products--list
+  .__list-single
+  .__list-single-img
+  .__list-np
+  span.lprice {
+  font-size: 16px;
+  color: #34495e;
+}
+.user-wrapper
+  .order-details
+  .details
+  .products--list
+  .__list-single
+  .__list-qty {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.user-wrapper
+  .order-details
+  .details
+  .products--list
+  .__list-single
+  .__list-qty
+  p.-qty {
+  font-size: 18px;
+  margin-bottom: 10px;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+.user-wrapper
+  .order-details
+  .details
+  .products--list
+  .__list-single
+  .__list-qty
+  p.-qty-txt {
+  font-size: 16px;
+  color: #34495e;
+}
+.user-wrapper
+  .order-details
+  .details
+  .products--list
+  .__list-single
+  .__list--subtotal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.user-wrapper
+  .order-details
+  .details
+  .products--list
+  .__list-single
+  .__list--subtotal
+  .--subtotal {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #1a1a1a;
+}
+.user-wrapper
+  .order-details
+  .details
+  .products--list
+  .__list-single
+  .__list--subtotal
+  .-subtt-txt {
+  font-size: 16px;
+  color: #34495e;
+}
+.user-wrapper .order-details .details .order-total {
+  position: relative;
+  width: 100%;
+  height: auto;
+  border-radius: 7px;
+  box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.4);
+  margin-top: 20px;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.user-wrapper .order-details .details .order-total .l-f-order {
+  font-size: 17px;
+  position: relative;
+}
+.user-wrapper .order-details .details .order-total .l-f-order p {
+  padding: 5px 0;
+  color: #4b6584;
+}
+.user-wrapper .order-details .details .order-total .l-f-order p span {
+  font-weight: 600;
+  color: #1a1a1a;
+}
+.user-wrapper .order-details .details .order-total .r-f-order h1 {
+  font-size: 25px;
+  color: #e84118;
+  font-weight: 600;
+}
+.user-wrapper .order-details .details.active {
+  right: 0;
+}
+.sh-address {
+  width: 100%;
+  word-wrap: break-word;
+  padding: 10px;
+  margin-top: 20px;
+  border-radius: 7px;
+  box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.4);
+}
+/*# sourceMappingURL=user.css.map */

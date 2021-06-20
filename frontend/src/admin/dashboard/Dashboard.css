@@ -1,0 +1,36 @@
+.panel--header {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.1);
+}
+.panel--header .logoAdmin {
+  font-size: 30px;
+  font-weight: 700;
+  transition: 0.2s;
+  border-bottom: 2px solid #fff;
+  color: #000;
+}
+.panel--header .logoAdmin:hover {
+  border-bottom: 2px solid #000;
+}
+.panel--header ul {
+  display: flex;
+  position: relative;
+}
+.panel--header ul > li {
+  margin-left: 20px;
+  border-bottom: 2px solid #fff;
+  transition: 0.2s;
+}
+.panel--header ul > li:hover {
+  border-bottom: 2px solid #000;
+}
+.panel--header ul > li > a {
+  color: #000;
+  font-size: 20px;
+  font-weight: 500;
+}

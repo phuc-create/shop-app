@@ -1,0 +1,242 @@
+/* use rem  */
+
+.login,
+.login .main__login,
+.login .main__login .l-l,
+.main__login .l-l .icons,
+.main__login .l-l .icons .icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: #f7f8f9;
+}
+
+.login .main__login {
+  position: relative;
+  min-width: 66rem;
+  height: 46rem;
+  background: #ffffff;
+  border-radius: 0.765rem;
+  overflow: hidden;
+  box-shadow: 0.125rem 0.125rem 0.3rem rgba(0, 0, 0, 0.3);
+}
+
+.login .main__login .l-l {
+  position: relative;
+  flex-direction: column;
+  width: 50%;
+}
+
+.main__login .l-l h1 {
+  font-weight: 900;
+  font-size: 2.56rem;
+  margin: 0 0 2rem 0;
+  color: #1a2e35;
+}
+
+.main__login .l-l .icons {
+  position: relative;
+  margin-bottom: 2.5rem;
+}
+
+.main__login .l-l .icons .icon {
+  margin: 0 0.7rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 0.1rem solid #1a2e35;
+  border-radius: 50%;
+  color: #1a2e35;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.main__login .l-l .icons .icon:hover svg {
+  transform: scale(1.2);
+  transition: 0.5s;
+}
+
+.main__login .l-l p {
+  color: #1a2e35;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-transform: capitalize;
+}
+
+.main__login .l-l input {
+  width: 75%;
+  font-size: 1.125rem;
+  font-weight: 700;
+  padding: 0.75rem 0.55rem;
+  margin-bottom: 0.75rem;
+  border: 0.125rem solid #e0eaee;
+  color: #1a2e35;
+  border-radius: 0.5rem;
+  outline: none;
+}
+
+.main__login .l-l .cb-txt {
+  position: relative;
+  margin-bottom: 1.2rem;
+}
+
+.main__login .l-l .cb-txt input[type="checkbox"] {
+  height: initial;
+  width: initial;
+  margin-bottom: 0;
+  display: none;
+  cursor: pointer;
+}
+
+.main__login .l-l .cb-txt label {
+  position: relative;
+  cursor: pointer;
+}
+
+.main__login .l-l .cb-txt label:before {
+  content: "";
+  -webkit-appearance: none;
+  background-color: transparent;
+  border: 0.125rem solid #1a2e35;
+  border-radius: 0.24rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05),
+    inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
+  padding: 0.65rem;
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  cursor: pointer;
+  margin-right: 0.75rem;
+}
+
+.main__login .l-l .cb-txt input[type="checkbox"]:checked + label:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 2px;
+  left: 9px;
+  width: 6px;
+  height: 14px;
+  border: solid #1a2e35;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.main__login .l-l .btn-action {
+  width: 75%;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+.main__login .l-l .btn-action button {
+  width: 45%;
+  padding: 0.67rem 0rem;
+  border-radius: 0.45rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+  cursor: pointer;
+  color: #ffffff;
+  background: #1a2e35;
+  border: 0.125rem solid #1a2e35;
+}
+
+.main__login .l-l .btn-action button:nth-child(2) {
+  color: #1a2e35;
+  background: #ffffff;
+  border: 0.125rem solid #1a2e35;
+}
+
+.main__login .l-l .sl-auth {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.login .main__login .r-l {
+  position: relative;
+  width: 50%;
+  height: 100%;
+  background: url("../../img/main.png");
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+  border-radius: 0.765rem;
+}
+.show-errLogin {
+  color: red;
+  margin-bottom: 20px;
+  font-size: 18px;
+  letter-spacing: 1px;
+  border: 1px solid;
+  padding: 3px 15px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 6px red;
+  animation: ring 0.5s forwards;
+}
+@keyframes ring {
+  0% {
+    transform: translateX(20px);
+  }
+  10% {
+    transform: translateX(0px);
+  }
+  15% {
+    transform: translateX(20px);
+  }
+  20% {
+    transform: translateX(0px);
+  }
+  25% {
+    transform: translateX(20px);
+  }
+  30% {
+    transform: translateX(0px);
+  }
+  35% {
+    transform: translateX(20px);
+  }
+  40% {
+    transform: translateX(0px);
+  }
+  45% {
+    transform: translateX(20px);
+  }
+  50% {
+    transform: translateX(0px);
+  }
+  55% {
+    transform: translateX(20px);
+  }
+  60% {
+    transform: translateX(0px);
+  }
+  65% {
+    transform: translateX(20px);
+  }
+  70% {
+    transform: translateX(0px);
+  }
+  75% {
+    transform: translateX(20px);
+  }
+  80% {
+    transform: translateX(0px);
+  }
+  85% {
+    transform: translateX(20px);
+  }
+  90% {
+    transform: translateX(0px);
+  }
+  95% {
+    transform: translateX(20px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
