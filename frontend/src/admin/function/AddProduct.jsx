@@ -6,10 +6,11 @@ import "./Control.css";
 
 function AddProduct() {
   const [productImg, setProductImg] = useState({});
+  const [urlImg, setUrlImg] = useState("");
   const [dataProduct, setDataProduct] = useState({
     name: "",
     description: "",
-    price: 0,
+    price: 1,
     available: 1,
     category: "",
     rating: 5,
@@ -17,6 +18,8 @@ function AddProduct() {
   const categories = useSelector((state) => state.categories);
   const handleProductImg = (e) => {
     setProductImg(e.target.files[0]);
+     setUrlImg(URL.createObjectURL(e.target.files[0]));
+
   };
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -112,6 +115,7 @@ function AddProduct() {
         <div className="inpt-wrap">
           <span>Image Product</span>
           <input type="file" name="productImg" onChange={handleProductImg} />
+          <img src={urlImg} alt=""  width="100px" height="100px"/>
         </div>
         <input type="submit" name="sub" value="add product" />
       </form>

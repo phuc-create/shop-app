@@ -3,8 +3,22 @@ import { Link } from "react-router-dom";
 import { AiTwotoneHeart } from "react-icons/ai";
 import { GiSeaStar } from "react-icons/gi";
 import { Url } from "../../UrlServer";
-function ProductShow({ products, categories }) {
+function ProductShow({ setFilterCLickOverlay,openFilter,products, categories }) {
+  const [valueForm, setValueForm] = useState({
+    nameProduct: "",
+    checkbox: "",
+    select:"",
+  })
   const [value, setValue] = useState(500);
+  const rangeValue = (e) => {
+    setValue(e.target.value);
+  }
+  const handleChangeInputValue = (e) => {
+    setValueForm({ ...valueForm, [e.target.name]: e.target.value });
+  }
+  const changeOverlay = () => {
+    setFilterCLickOverlay();
+  }
   //set navigation for product//////////
   const [page, setPage] = useState({
     currentPage: Number(1),
@@ -23,9 +37,7 @@ function ProductShow({ products, categories }) {
     setPage({ ...page, currentPage: Number(e.target.id) });
   };
   ////////////////////////////////
-  const handleChangeRange = (e) => {
-    setValue(e.target.value);
-  };
+  
   //currentcy
   const formatter = new Intl.NumberFormat("en-US", {
     style: "currency",
@@ -35,7 +47,44 @@ function ProductShow({ products, categories }) {
 
   return (
     <div className="showProducts">
-      <div className="filter">
+      <div className={openFilter ? "overlay-mobile dark": "overlay-mobile"} onClick={changeOverlay}></div>
+      <form className={openFilter ? "filter openFilter" : "filter"}>
+        
+  <div className="ft-search">
+    <span>Search Product</span>
+          <input type="text" className="search-pr" onChange={handleChangeInputValue}/>
+  </div>
+   <div className="filter-ck">
+          <h1 className="ft-ck-cate">Categories</h1>
+          {categories.map((category) => {
+            return (
+              <div className="ft-ck-single" key={category._id}>
+                <input type="checkbox" id={category._id} name="checkbox" />
+                <label htmlFor={category._id}>{category.cateName}</label>
+              </div>
+            )
+          })}
+  </div>
+  <div className="ft-c">
+    <h1 className="ft-c-sort">Sort By</h1>
+    <div className="sl-wrap">
+    <select className="ft-c-select" name="select" onChange={handleChangeInputValue} value={valueForm.select}>
+      <option className="op-ft">select option</option>
+      <option className="op-ft">Product Name</option>
+      <option className="op-ft">Product Price</option>
+      <option className="op-ft">Product Rating</option>
+      <option className="op-ft">Product Selling</option>
+    </select>
+    </div>
+  </div>
+  <div className="ft-range">
+          <h1 className="ft-r-title" id="value-range">Price { value}</h1>
+    <div className="ft-r-iput">
+      <input type="range" name="range" min="1" value={value} max="10000" onChange={rangeValue} />
+    </div>
+  </div>
+</form>
+      {/* <div className="filter">
         <div className="btn-mobile"></div>
         <form>
           <input
@@ -101,7 +150,7 @@ function ProductShow({ products, categories }) {
             </div>
           </div>
         </form>
-      </div>
+      </div> */}
       <div className="prd">
         <div className="product-s">
           {currentProducts.map((product) => {

@@ -63,7 +63,6 @@ function Register() {
           className="show-errLogin"
           style={{ color: "red", marginBottom: "20px", fontSize: "18px" }}
         >
-          {user.err.message}!
         </span>
       ) : (
         <div></div>

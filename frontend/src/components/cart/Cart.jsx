@@ -27,7 +27,9 @@ function Cart() {
     minimumFractionDigits: 2,
   });
   const handleRemoveProduct = (itemId) => {
-    dispatch(checkRemoveToCart(itemId));
+    const confirmDel = window.confirm("delete this product from cart ?");
+    if (confirmDel) dispatch(checkRemoveToCart(itemId));
+    else return;
   };
   const increaseQty = (idpr, type) => {
     // const cartCheck = cartItems.find((c) => c.productId === idpr);

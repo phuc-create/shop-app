@@ -14,6 +14,7 @@ import { checkInforUser } from "./redux/actions/userActions";
 import Cart from "./components/cart/Cart";
 import Checkout from "./components/checkout/Checkout";
 import User from "./components/user/User";
+import ScrollToTop from "./protected-route/ScrollToTop";
 
 function App() {
   const dispatch = useDispatch();
@@ -25,6 +26,7 @@ function App() {
     //<GlobalState>
     <div>
       <Router>
+        <ScrollToTop />
         <Switch>
           <ProtectedRoute exact path="/" component={Main} />
           <Route path="/shop" component={ProductPage} />

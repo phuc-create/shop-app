@@ -61,7 +61,7 @@ function ProductsRecommend({ proFetch }) {
                     </div>
                     <div className="prdBot">
                       <span className="prdPrice">{product.price} $</span>
-                      <button>Add to cart</button>
+                      <button>View</button>
                     </div>
                   </Link>
                 );

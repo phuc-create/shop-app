@@ -3,7 +3,7 @@ import React from "react";
 const OrderSingle = ({ od, handleDeleteOrder, MultiShow, formatter }) => {
   return (
     <tr>
-      <td>{od ? od._id.substring(0, 5) : ""}</td>
+      <td>{od ? od._id.substring(17, 23) : ""}</td>
 
       <td>{od.username}</td>
       <td>{od.email}</td>
