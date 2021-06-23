@@ -381,7 +381,7 @@
     width: 450px;
   }
   .user-wrapper .user .user__orders {
-    width: calc(100% - 450px);
+    width: 50%;
   }
 }
 @media (max-width: 824px) {

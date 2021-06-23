@@ -42,11 +42,7 @@ function Categories() {
       console.log("Please dont");
     }
   };
-  // const formatter = new Intl.NumberFormat("en-US", {
-  //   style: "currency",
-  //   currency: "USD",
-  //   minimumFractionDigits: 2,
-  // });
+
   const MultiShow = (id) => {
     setShowDetails(!showDetails);
     setEditCate(id);

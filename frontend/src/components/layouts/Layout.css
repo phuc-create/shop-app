@@ -538,7 +538,7 @@ nav .option-log a:nth-child(2):hover {
 
 #nav-icon-bar.open span:nth-child(2),
 .nav-icon-bar.inside.open span:nth-child(2) {
-  left: calc(50% - 4px);
+  left: 44%;
   top: 11px;
 }
 
@@ -562,7 +562,7 @@ nav .option-log a:nth-child(2):hover {
 
 #nav-icon-bar.open span:nth-child(6),
 .nav-icon-bar.inside.open span:nth-child(6) {
-  left: calc(50% - 4px);
+  left: 42%;
   top: 24px;
 }
 /* REPONSIVE WEBSITE FOOTER */

@@ -8,11 +8,6 @@ import Login from "./Login";
 import Register from "./Register";
 function Auth({ authRoute }) {
   const user = useSelector((state) => state.user);
-
-  // useEffect(() => {
-  //   dispatch(checkInforUser());
-  // }, [dispatch, user.isAuthenticated]);
-
   return user.user !== null && user.isAuthenticated === true ? (
     <Redirect to="/" />
   ) : (

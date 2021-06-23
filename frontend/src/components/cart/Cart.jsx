@@ -13,7 +13,6 @@ import CartItem from "./CartItem";
 function Cart() {
   const dispatch = useDispatch();
   const user = useSelector((state) => state.user);
-  // const [quantity, setQuantity] = useState(0);
   const cartItems = user.user.cartItems;
 
   const totalCart = () => {
@@ -32,22 +31,10 @@ function Cart() {
     else return;
   };
   const increaseQty = (idpr, type) => {
-    // const cartCheck = cartItems.find((c) => c.productId === idpr);
-    // if (cartCheck.quantity === 10) {
-    //   alert("Value from 1 to 10");
-    //   return;
-    // } else {
     dispatch(checkUpdateToCart(idpr, type));
-    // }
   };
   const decreaseQty = (idpr, type) => {
-    // const cartCheck = cartItems.find((c) => c.productId === idpr);
-    // if (cartCheck.quantity === 1) {
-    //   alert("Value from 1 to 10");
-    //   return;
-    // } else {
     dispatch(checkUpdateToCart(idpr, type));
-    // }
   };
   return (
     <div className="main">
