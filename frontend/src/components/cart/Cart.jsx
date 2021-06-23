@@ -61,11 +61,9 @@ function Cart() {
               <table>
                 <thead>
                   <tr>
-                    <td></td>
-                    <td>Product</td>
-                    <td>Price</td>
-                    <td>Qty</td>
-                    <td>Total</td>
+                    <td className="hidden-for-medium-only">Remove</td>
+                    <td>Product in cart</td>
+                    <td className="hidden-for-medium-only">View</td>
                   </tr>
                 </thead>
 
@@ -85,11 +83,9 @@ function Cart() {
 
                 <tfoot>
                   <tr>
-                    <td></td>
-                    <td>Product</td>
-                    <td>Price</td>
-                    <td>Qty</td>
-                    <td>Total</td>
+                    <td className="hidden-for-medium-only">Remove</td>
+                    <td>Product in cart</td>
+                    <td className="hidden-for-medium-only">View</td>
                   </tr>
                 </tfoot>
               </table>

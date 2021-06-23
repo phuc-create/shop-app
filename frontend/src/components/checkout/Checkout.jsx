@@ -12,17 +12,18 @@ const Checkout = () => {
   const user = useSelector((state) => state.user);
   const cartItems = user.user.cartItems;
 
-  //const [totalOrder, setTotalOrder] = useState(0);
   const [countries, setCountries] = useState([]);
   const [expand, setExpand] = useState({
     cash: false,
     bank: false,
   });
+
   const totalCart = () => {
     let totalPrice = 12.99;
     cartItems.forEach((item) => (totalPrice += item.price * item.quantity));
     return totalPrice;
   };
+
   const [prepareOrder, setPrepareOrder] = useState({
     userId: user.user._id,
     username: user.user.username,
@@ -35,6 +36,7 @@ const Checkout = () => {
     totalPrice: totalCart(),
     orderDetails: cartItems,
   });
+
   const { username, email, phone, company, country, address } = prepareOrder;
   ////////////////////////////
   const handleSetInfor = (e) => {
@@ -86,12 +88,6 @@ const Checkout = () => {
       <ToastContainer />
       <div className="checkout">
         <form className="ck__left" onSubmit={handlesubmit}>
-          {/* <input
-            type="hidden"
-            name="totalOrder"
-            value={totalCart()}
-            onChange={handleSetInfor}
-          /> */}
           <div className="ck-form-wrap">
             <h1>payment details</h1>
             <p>complete your purchase by providing your peyment details</p>
@@ -188,7 +184,7 @@ const Checkout = () => {
                     onChange={handleSetInfor}
                   />
                   <div className="radio"></div>
-                  <span>Payment on delivery(default)</span>
+                  <span>By Cash (default)</span>
                 </label>
                 <div className="bx-content">
                   Lorem ipsum dolor, sit amet consectetur adipisicing elit.
@@ -210,7 +206,7 @@ const Checkout = () => {
                     onChange={handleSetInfor}
                   />
                   <div className="radio"></div>
-                  <span>Pay By Cank Card</span>
+                  <span>Pay By Bank Card</span>
                 </label>
                 <div className="bx-content">
                   <h1 style={{ color: "#e74c3c" }}>Comming soon</h1>
@@ -246,6 +242,9 @@ const Checkout = () => {
                       <div className="name-pr">{item.name}</div>
                       <div className="qty-pr">
                         x{item.quantity} * {formatter.format(item.price)}
+                      </div>
+                      <div className="sub-pr-show-mobile">
+                        {formatter.format(item.price * item.quantity)}
                       </div>
                     </div>
                   </div>

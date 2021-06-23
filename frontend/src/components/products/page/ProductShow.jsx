@@ -3,22 +3,27 @@ import { Link } from "react-router-dom";
 import { AiTwotoneHeart } from "react-icons/ai";
 import { GiSeaStar } from "react-icons/gi";
 import { Url } from "../../UrlServer";
-function ProductShow({ setFilterCLickOverlay,openFilter,products, categories }) {
+function ProductShow({
+  setFilterCLickOverlay,
+  openFilter,
+  products,
+  categories,
+}) {
   const [valueForm, setValueForm] = useState({
     nameProduct: "",
     checkbox: "",
-    select:"",
-  })
+    select: "",
+  });
   const [value, setValue] = useState(500);
   const rangeValue = (e) => {
     setValue(e.target.value);
-  }
+  };
   const handleChangeInputValue = (e) => {
     setValueForm({ ...valueForm, [e.target.name]: e.target.value });
-  }
+  };
   const changeOverlay = () => {
     setFilterCLickOverlay();
-  }
+  };
   //set navigation for product//////////
   const [page, setPage] = useState({
     currentPage: Number(1),
@@ -37,7 +42,7 @@ function ProductShow({ setFilterCLickOverlay,openFilter,products, categories }) 
     setPage({ ...page, currentPage: Number(e.target.id) });
   };
   ////////////////////////////////
-  
+
   //currentcy
   const formatter = new Intl.NumberFormat("en-US", {
     style: "currency",
@@ -47,110 +52,65 @@ function ProductShow({ setFilterCLickOverlay,openFilter,products, categories }) 
 
   return (
     <div className="showProducts">
-      <div className={openFilter ? "overlay-mobile dark": "overlay-mobile"} onClick={changeOverlay}></div>
+      <div
+        className={openFilter ? "overlay-mobile dark" : "overlay-mobile"}
+        onClick={changeOverlay}
+      ></div>
       <form className={openFilter ? "filter openFilter" : "filter"}>
-        
-  <div className="ft-search">
-    <span>Search Product</span>
-          <input type="text" className="search-pr" onChange={handleChangeInputValue}/>
-  </div>
-   <div className="filter-ck">
+        <div className="ft-search">
+          <span>Search Product</span>
+          <input
+            type="text"
+            className="search-pr"
+            onChange={handleChangeInputValue}
+          />
+        </div>
+        <div className="filter-ck">
           <h1 className="ft-ck-cate">Categories</h1>
           {categories.map((category) => {
             return (
               <div className="ft-ck-single" key={category._id}>
                 <input type="checkbox" id={category._id} name="checkbox" />
-                <label htmlFor={category._id}>{category.cateName}</label>
-              </div>
-            )
-          })}
-  </div>
-  <div className="ft-c">
-    <h1 className="ft-c-sort">Sort By</h1>
-    <div className="sl-wrap">
-    <select className="ft-c-select" name="select" onChange={handleChangeInputValue} value={valueForm.select}>
-      <option className="op-ft">select option</option>
-      <option className="op-ft">Product Name</option>
-      <option className="op-ft">Product Price</option>
-      <option className="op-ft">Product Rating</option>
-      <option className="op-ft">Product Selling</option>
-    </select>
-    </div>
-  </div>
-  <div className="ft-range">
-          <h1 className="ft-r-title" id="value-range">Price { value}</h1>
-    <div className="ft-r-iput">
-      <input type="range" name="range" min="1" value={value} max="10000" onChange={rangeValue} />
-    </div>
-  </div>
-</form>
-      {/* <div className="filter">
-        <div className="btn-mobile"></div>
-        <form>
-          <input
-            type="text"
-            name="search_product"
-            className="search"
-            placeholder="Find product"
-          />
-          <div className="filter_ cate" id="cateFill">
-            <h1>Categories_</h1>
-            <label className="cate-fill">
-              <input
-                type="radio"
-                className="radio__filter"
-                name="cate"
-                value=""
-              />
-              <div className="radio__radio"></div>
-              All Products
-            </label>
-            {categories.map((category) => {
-              return (
-                <label
-                  className="cate-fill"
-                  key={category._id}
-                  // onClick={() => filterProduct(category.cateName)}
-                >
-                  <input
-                    type="radio"
-                    className="radio__filter"
-                    name="cate"
-                    value={category._id}
-                  />
-                  <div className="radio__radio"></div>
+                <label className="ft-cate-checkbox" htmlFor={category._id}>
                   {category.cateName}
                 </label>
-              );
-            })}
+              </div>
+            );
+          })}
+        </div>
+        <div className="ft-c">
+          <h1 className="ft-c-sort">Sort By</h1>
+          <div className="sl-wrap">
+            <select
+              className="ft-c-select"
+              name="select"
+              onChange={handleChangeInputValue}
+              value={valueForm.select}
+            >
+              <option className="op-ft">select option</option>
+              <option className="op-ft">Product Name</option>
+              <option className="op-ft">Product Price</option>
+              <option className="op-ft">Product Rating</option>
+              <option className="op-ft">Product Selling</option>
+            </select>
           </div>
-
-          <div className="rangeInput">
-            <h1>Filter by price_</h1>
+        </div>
+        <div className="ft-range">
+          <h1 className="ft-r-title" id="value-range">
+            Price {value}
+          </h1>
+          <div className="ft-r-iput">
             <input
-              className="range__filter"
               type="range"
+              name="range"
               min="1"
-              max="100000"
               value={value}
-              onChange={handleChangeRange}
+              max="10000"
+              onChange={rangeValue}
             />
-            <span>From: 1$ to {value}$</span>
           </div>
-          <div className="selectInput">
-            <h1>Sort by_</h1>
-            <div style={{ position: "relative" }}>
-              <select className="select__filter">
-                <option value="name">Name</option>
-                <option value="name">Price</option>
-                <option value="name">Rating</option>
-                <option value="name">Popular</option>
-              </select>
-              <div className="abs-dropSelect"></div>
-            </div>
-          </div>
-        </form>
-      </div> */}
+        </div>
+      </form>
       <div className="prd">
         <div className="product-s">
           {currentProducts.map((product) => {

@@ -88,7 +88,7 @@ function AboutPage() {
         <div className="tempo">
           <div className="intro">
             <div className="sign-txt">
-              <h1>name</h1>
+              <h1>Explore</h1>
               <p>
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                 Cupiditate, rerum necessitatibus est perferendis, voluptate enim

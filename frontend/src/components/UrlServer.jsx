@@ -1,1 +1,2 @@
-export const Url = 'http://localhost:5000';
+export const Url =
+  process.env.NODE_ENV !== "production" ? "http://localhost:5000" : "serverurl";

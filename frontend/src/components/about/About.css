@@ -132,8 +132,7 @@
   align-items: center;
   flex-direction: column;
   width: 100%;
-  height: auto;
-  overflow: hidden;
+
   margin-bottom: 50px;
 }
 
@@ -172,9 +171,6 @@
   width: 100%;
   height: auto;
   object-fit: cover;
-  background-size: 50%;
-  animation: turssnLeft 0.5s forwards;
-  z-index: 2;
 }
 .about .ab-infor {
   position: relative;
@@ -246,7 +242,6 @@
 
 .about .ab-infor .ab__infor-wrapper .ab__infor--social .__social {
   position: relative;
-  border: 1px solid;
   color: #fff;
   background: #000;
   display: flex;
@@ -270,7 +265,6 @@
 }
 .about .tempo {
   max-width: 1400px;
-  height: auto;
   position: relative;
 }
 .about .tempo .intro {
@@ -305,7 +299,8 @@
 .about .tempo .intro .sign-txt p {
   width: 100%;
   font-size: 17px;
-  word-break: break-all;
+  word-break: break-word;
+  word-wrap: break-word;
   line-height: 40px;
   margin-bottom: 20px;
 }
@@ -328,7 +323,17 @@
   margin: 30px 0;
 }
 /* REPONSIVE WEBSITE */
-@media (max-width: 1600px) {
+@media (max-width: 1400px) {
+  .about .tempo .intro .sign-txt {
+    width: 50%;
+    padding: 20px 40px 0px 20px;
+  }
+  .about .tempo .intro img {
+    width: 50%;
+  }
+  .about .ab-infor .ab__infor-wrapper .ab__infor--content {
+    padding-left: 20px;
+  }
 }
 @media (max-width: 1210px) {
   .about-p .ab-l h1 {
@@ -339,6 +344,12 @@
   .about-p .ab-l .ab-bot,
   .about-p .ab-r .abs-bot span {
     font-size: 17px;
+  }
+  .about .header-ab .p1-white button {
+    letter-spacing: 10px;
+    font-size: 50px;
+    font-weight: 600;
+    text-transform: uppercase;
   }
 }
 @media (max-width: 1000px) {
@@ -355,6 +366,29 @@
   .about-p .ab-l .ab_line-on {
     margin-top: 60px;
   }
+  .about .ab-infor .ab__infor-wrapper {
+    flex-direction: column;
+  }
+  .about .ab-infor .ab__infor-wrapper .ab__infor--content,
+  .about .ab-infor .ab__infor-wrapper .ab__infor--social {
+    width: inherit;
+  }
+  .about .ab-infor .ab__infor-wrapper .ab__infor--content h1 {
+    word-wrap: break-word;
+  }
+  .about .tempo .intro {
+    flex-direction: column;
+    align-items: center;
+  }
+  .about .tempo .intro .sign-txt {
+    width: inherit;
+    order: 1;
+    padding: 20px;
+  }
+  .about .tempo .intro img {
+    width: 98%;
+    border: 3px solid rgba(0, 0, 0, 0.2);
+  }
 }
 @media (max-width: 648px) {
   .about-p .ab-l,
@@ -365,8 +399,24 @@
     padding: 12px 0px;
     width: 120px;
     font-size: 16px;
-
-}
+  }
+  .about .header-ab .p1-white button {
+    width: auto;
+    letter-spacing: 5px;
+    font-size: 25px;
+    padding: 10px 20px;
+  }
+  .about .ab-infor h1.whoweare {
+    margin-top: 0;
+    font-size: 20px;
+  }
+  .about .ab-infor .ab__infor-wrapper .ab__infor--content h1 {
+    font-size: 25px;
+    font-weight: 500;
+  }
+  .about .ab-infor .ab__infor-wrapper .ab__infor--content {
+    padding-left: 10px;
+  }
 }
 @media (max-width: 475px) {
   .about-p .ab-l h1 {
@@ -385,6 +435,36 @@
     bottom: 10%;
     right: 23%;
     width: 60%;
+  }
+  .about .ab-infor .ab__infor-wrapper .ab__infor--social button,
+  .about .ab-infor .ab__infor-wrapper .ab__infor--social .__social {
+    width: 95%;
+  }
+  .about .ab-infor .ab__infor-wrapper .ab__infor--content p,
+  .about .ab-infor .ab__infor-wrapper .ab__infor--social span,
+  .about .tempo .intro .sign-txt p {
+    font-size: 15px;
+    line-height: 31px;
+  }
+  .ab__infor--social .__social .icon {
+    font-size: 20px;
+    height: 80px;
+  }
+  .about .tempo .intro img {
+    padding: 4px;
+  }
+  .about .tempo .intro .sign-txt span {
+    font-size: 25px;
+  }
+  .about .ft-about {
+    letter-spacing: 1px;
+    font-size: 20px;
+  }
+  .about .header-ab .p1-white button {
+    font-weight: 500;
+    letter-spacing: 1px;
+    font-size: 17px;
+    padding: 5px 15px;
   }
 }
 @media (max-width: 400px) {

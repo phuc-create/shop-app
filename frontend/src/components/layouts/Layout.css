@@ -78,7 +78,7 @@ nav .option-log a:nth-child(2) {
   color: #ffffff;
   border-radius: 5px;
 }
-nav .option-log a:nth-child(2):hover{
+nav .option-log a:nth-child(2):hover {
   color: #ffffff;
 }
 .footer {
@@ -449,7 +449,7 @@ nav .option-log a:nth-child(2):hover{
   -moz-transition: 0.5s ease-in-out;
   -o-transition: 0.5s ease-in-out;
   transition: 0.5s ease-in-out;
-  z-index: 2;
+  z-index: -1;
   cursor: pointer;
   overflow: hidden;
   top: 2.2%;
@@ -590,6 +590,9 @@ nav .option-log a:nth-child(2):hover{
   #nav-icon-bar span {
     display: block;
   }
+  .nav-icon-bar.inside {
+    z-index: 2;
+  }
   .nav-icon-bar.inside span {
     display: block;
   }
@@ -720,7 +723,7 @@ nav .option-log a:nth-child(2):hover{
     margin: 12px 0px !important;
   }
   .page-l h1 {
-    font-size: 40px;
+    font-size: 39px;
   }
   .page-l p,
   .page-l .pl_action a,

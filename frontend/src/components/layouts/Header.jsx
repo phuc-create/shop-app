@@ -50,7 +50,6 @@ function Header() {
               Cart[{user.user !== null ? user.user.cartItems.length : "X"}]
             </Link>
           </li>
-
           <li className="option-log hidden-for-large">
             {user.user === null ? (
               <Link to="/login">Login</Link>

@@ -288,18 +288,18 @@
   justify-content: center;
   align-items: center;
 }
-.productGreeting button{
+.productGreeting button {
   display: none;
-    padding: 10px;
-    width: 130px;
-    font-size: 18px;
-    letter-spacing: 1px;
-    font-weight: 600;
-    border: none;
-    background: #2c3e50;
-    border-radius: 5px;
-    color: #fff;
-    cursor: pointer;
+  padding: 10px;
+  width: 130px;
+  font-size: 18px;
+  letter-spacing: 1px;
+  font-weight: 600;
+  border: none;
+  background: #2c3e50;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
 }
 .blog-p .blog-ex .bl-bx .img_bl-wrap {
   position: relative;
@@ -387,14 +387,14 @@
     margin-bottom: 30px;
   }
 }
-@media (max-width:1024px){
- .productGreeting button {
+@media (max-width: 1024px) {
+  .productGreeting button {
     display: unset;
-} 
- .productGreeting{
-   padding:0px 20px;
-   justify-content: space-between;
- }
+  }
+  .productGreeting {
+    padding: 0px 20px;
+    justify-content: space-between;
+  }
 }
 @media (max-width: 856px) {
   .blog-p .blog-ex .bl-bx {
@@ -413,6 +413,9 @@
   .blog-p .blog-ex .bl-bx .info-bl {
     font-size: 14px;
   }
+  .main .introduce h1 {
+    font-size: 25px;
+  }
 }
 @media (max-width: 475px) {
   .blog-p .ctrl-bl {
@@ -422,15 +425,17 @@
   .blog-p .ctrl-bl a {
     font-size: 15px;
   }
-  .productGreeting .p-title{
+  .productGreeting .p-title {
     font-size: 21px;
-    font-weight:600;
+    font-weight: 600;
   }
-  .productGreeting button{
-    
+  .productGreeting button {
     width: 100px;
     font-size: 15px;
     letter-spacing: 2px;
     font-weight: 400;
+  }
+  .main .introduce h1 {
+    font-size: 22px;
   }
 }

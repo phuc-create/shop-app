@@ -141,7 +141,7 @@ const User = () => {
                         ? "#e84118"
                         : "#009432",
                     textTransform: "capitalize",
-                    fontWeight: "700",
+                    fontWeight: "600",
                   }}
                 >
                   {detailThis ? detailThis.status : ""}
@@ -170,7 +170,7 @@ const User = () => {
                             <p className="lname">
                               {item.name.length < 11
                                 ? item.name
-                                : `${item.name.substring(0, 8)}...`}
+                                : `${item.name.substring(0, 8)}.`}
                             </p>
                             <span className="lprice">
                               {formatter.format(item.price)}
@@ -178,7 +178,7 @@ const User = () => {
                           </div>
                         </div>
                         <div className="__list-qty">
-                          <p className="-qty">{item.quantity}</p>
+                          <p className="-qty">x {item.quantity}</p>
                           <p className="-qty-txt">Quantity</p>
                         </div>
                         <div className="__list--subtotal">
@@ -191,57 +191,6 @@ const User = () => {
                     );
                   })
                 : ""}
-              {/* <div className="__list-single">
-                <div className="__list-single-img">
-                  <img src="./img/bg.jpg" alt="asdasd" />
-                  <div className="__list-np">
-                    <p className="lname">Product Name</p>
-                    <span className="lprice">10000$</span>
-                  </div>
-                </div>
-                <div className="__list-qty">
-                  <p className="-qty">2</p>
-                  <p className="-qty-txt">Quantity</p>
-                </div>
-                <div className="__list--subtotal">
-                  <p className="--subtotal">12000$</p>
-                  <p className="-subtt-txt">Subtotal</p>
-                </div>
-              </div>
-              <div className="__list-single">
-                <div className="__list-single-img">
-                  <img src="./img/bg.jpg" alt="asdasd" />
-                  <div className="__list-np">
-                    <p className="lname">Product Name</p>
-                    <span className="lprice">10000$</span>
-                  </div>
-                </div>
-                <div className="__list-qty">
-                  <p className="-qty">2</p>
-                  <p className="-qty-txt">Quantity</p>
-                </div>
-                <div className="__list--subtotal">
-                  <p className="--subtotal">12000$</p>
-                  <p className="-subtt-txt">Subtotal</p>
-                </div>
-              </div>
-              <div className="__list-single">
-                <div className="__list-single-img">
-                  <img src="./img/bg.jpg" alt="asdasd" />
-                  <div className="__list-np">
-                    <p className="lname">Product Name</p>
-                    <span className="lprice">10000$</span>
-                  </div>
-                </div>
-                <div className="__list-qty">
-                  <p className="-qty">2</p>
-                  <p className="-qty-txt">Quantity</p>
-                </div>
-                <div className="__list--subtotal">
-                  <p className="--subtotal">12000$</p>
-                  <p className="-subtt-txt">Subtotal</p>
-                </div>
-              </div> */}
             </div>
             <div className="order-total">
               <div className="l-f-order">

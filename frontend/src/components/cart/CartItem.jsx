@@ -21,45 +21,51 @@ const CartItem = ({ item, handleRemoveProduct, decreaseQty, increaseQty }) => {
   };
   return (
     <tr key={item._id}>
-      <td>
+      <td className="cart__v1 trash">
         <BsTrash
           className="trash-control"
           onClick={() => handleRemoveProduct(item.productId)}
         />
       </td>
-      <td className="cart__view-both name">
+      <td className="cart__v2">
         <div className="img-wraper">
           <img src={`${Url}/${item.productImg}`} alt={item.productImg} />
         </div>
-        <p>{item.name}</p>
+        <p>
+          <span className="v2--show-mobile">Pr-Name: </span>
+          {item.name}
+        </p>
       </td>
-      <td>{formatter.format(item.price)}</td>
-      <td className="cart__view-both quantity ">
-        <div className="qty-set">
-          <button
-            className="middle-check"
-            disabled={qty === 1 ? true : false}
-            onClick={
-              decQty
-              // () => decreaseQty(item.productId, "dec")
-            }
-          >
-            <FiMinusCircle className="quantity-control" />
-          </button>
-          {qty}
-          <button
-            className="middle-check"
-            disabled={qty === 10 ? true : false}
-            onClick={
-              incQty
-              //() => increaseQty(item.productId, "inc")
-            }
-          >
-            <FiPlusCircle className="quantity-control" />
-          </button>
+      <td className="cart__v3">
+        <div className="v3--single price">
+          <span className="v3-mobile">Price:</span>
+          <div>{formatter.format(item.price)}</div>
+        </div>
+        <div className="v3--single quantity ">
+          <span className="v3-mobile">Quantity:</span>
+          <div className="qty-set">
+            <button
+              className="middle-check"
+              disabled={qty === 1 ? true : false}
+              onClick={decQty}
+            >
+              <FiMinusCircle className="quantity-control" />
+            </button>
+            {qty}
+            <button
+              className="middle-check"
+              disabled={qty === 10 ? true : false}
+              onClick={incQty}
+            >
+              <FiPlusCircle className="quantity-control" />
+            </button>
+          </div>
+        </div>
+        <div className="v3--single subtotal">
+          <span className="v3-mobile">Subtotal:</span>
+          <div>{formatter.format(item.price * qty)}</div>
         </div>
       </td>
-      <td>{formatter.format(item.price * qty)}</td>
     </tr>
   );
 };
