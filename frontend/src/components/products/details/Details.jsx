@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { toast, ToastContainer } from 'react-toastify'
+import { toast, ToastContainer } from "react-toastify";
 import Header from "../../layouts/Header";
 import Footer from "../../layouts/Footer";
 import { GiSeaStar } from "react-icons/gi";
-import { IoIosArrowDropup } from 'react-icons/io'
+import { IoIosArrowDropup } from "react-icons/io";
 import { useParams } from "react-router-dom";
 import { Url } from "../../UrlServer";
 import "./Details.css";
@@ -22,20 +22,17 @@ function Details() {
   const [details, setDetails] = useState({});
   const [readMore, setReadmore] = useState(false);
   const [show, setShow] = useState(true);
-
-  console.log(details);
   const AddToCart = (product) => {
     const checkCart = user.user.cartItems.filter(
       (x) => x.productId === product._id
     );
-    if (checkCart.length >= 1) alert("Product Added To Cart!!!")
+    if (checkCart.length >= 1) alert("Product Added To Cart!!!");
     else {
       dispatch(checkAddToCart(product));
       setTimeout(() => {
         toast.success("Added to Cart");
-      }, 2000)
+      }, 2000);
     }
-
   };
 
   //currentcy
@@ -61,9 +58,12 @@ function Details() {
       <Header />
       <ToastContainer />
       {details !== null || details !== undefined ? (
-        <div className="dtls-wrap" style={{
-          "--image": details ? `url(${Url}/${details.productImg})` : "none",
-        }}>
+        <div
+          className="dtls-wrap"
+          style={{
+            "--image": details ? `url(${Url}/${details.productImg})` : "none",
+          }}
+        >
           <div
             className="dtls"
             key={details ? details._id : "1"}
@@ -95,8 +95,9 @@ function Details() {
                   {details ? formatter.format(details.price) : "000"}
                 </p>
                 <div className="btn-group-dt">
-
-                  <button onClick={() => AddToCart(details)}>Add to cart</button>
+                  <button onClick={() => AddToCart(details)}>
+                    Add to cart
+                  </button>
                 </div>
               </div>
               <div className={readMore ? "dt-view  read-more" : "dt-view"}>
@@ -116,7 +117,9 @@ function Details() {
                     Story
                   </button>
                 </div>
-                <div className={show ? "dt-view-wraper" : "dt-view-wraper show"}>
+                <div
+                  className={show ? "dt-view-wraper" : "dt-view-wraper show"}
+                >
                   <div className="infor-pl">
                     <p>{details ? details.description : ""}</p>
                   </div>
@@ -125,7 +128,10 @@ function Details() {
                   </div>
                 </div>
               </div>
-              <IoIosArrowDropup className={readMore ? "dt-readmore rotate" : "dt-readmore"} onClick={() => setReadmore(!readMore)} />
+              <IoIosArrowDropup
+                className={readMore ? "dt-readmore rotate" : "dt-readmore"}
+                onClick={() => setReadmore(!readMore)}
+              />
             </div>
           </div>
         </div>

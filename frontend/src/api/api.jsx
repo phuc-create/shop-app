@@ -1,33 +1,32 @@
 import axios from "axios";
-
-const url = "http://localhost:5000";
+import { Url } from "../components/UrlServer";
 //PRODUCTS API
-export const fetchProducts = () => axios.get(`${url}/products/view-both`);
+export const fetchProducts = () => axios.get(`${Url}/products/view-both`);
 export const deleteProduct = (id) =>
-  axios.delete(`${url}/products/delete-product/${id}`);
+  axios.delete(`${Url}/products/delete-product/${id}`);
 export const updateProduct = (form) =>
-  axios.post(`${url}/products/update-product`, form);
+  axios.post(`${Url}/products/update-product`, form);
 //CATEGORIES API
-export const fetchCategories = () => axios.get(`${url}/cate`);
-export const deleteCategory = (id) => axios.delete(`${url}/cate/${id}`);
-export const addCategory = (form) => axios.post(`${url}/cate`, form);
+export const fetchCategories = () => axios.get(`${Url}/cate`);
+export const deleteCategory = (id) => axios.delete(`${Url}/cate/${id}`);
+export const addCategory = (form) => axios.post(`${Url}/cate`, form);
 //USER API
-export const userLogin = (payload) => axios.post(`${url}/ath/login`, payload);
-export const userInfor = () => axios.get(`${url}/ath/infor`);
+export const userLogin = (payload) => axios.post(`${Url}/ath/login`, payload);
+export const userInfor = () => axios.get(`${Url}/ath/infor`);
 export const userRegister = (payload) =>
-  axios.post(`${url}/ath/register`, payload);
-export const userLogout = () => axios.delete(`${url}/ath/logout`);
+  axios.post(`${Url}/ath/register`, payload);
+export const userLogout = () => axios.delete(`${Url}/ath/logout`);
 export const userAddToCart = (payload) =>
-  axios.post(`${url}/ath/add-to-cart`, payload);
+  axios.post(`${Url}/ath/add-to-cart`, payload);
 export const userRemoveToCart = (payload) =>
-  axios.get(`${url}/ath/cart-delete?id=${payload}`);
+  axios.get(`${Url}/ath/cart-delete?id=${payload}`);
 export const userUpdateToCart = (id, type) =>
-  axios.get(`${url}/ath/update?id=${id}&type=${type}`);
-export const userCheckout = (data) => axios.post(`${url}/order/checkout`, data);
+  axios.get(`${Url}/ath/update?id=${id}&type=${type}`);
+export const userCheckout = (data) => axios.post(`${Url}/order/checkout`, data);
 //ORDER API
-export const userOrders = () => axios.get(`${url}/order/orders`);
-export const adminOrders = () => axios.get(`${url}/order/get-all-orders`);
+export const userOrders = () => axios.get(`${Url}/order/orders`);
+export const adminOrders = () => axios.get(`${Url}/order/get-all-orders`);
 export const adminDeleteOrders = (id) =>
-  axios.delete(`${url}/order/delete-order/${id}`);
+  axios.delete(`${Url}/order/delete-order/${id}`);
 export const adminUpdateOrders = (status) =>
-  axios.post(`${url}/order/update-status`, status);
+  axios.post(`${Url}/order/update-status`, status);

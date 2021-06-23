@@ -24,7 +24,7 @@ function Main() {
 
   //CHECK USER LOGGON AND REDIRECT TO LOGIN PAGE IF NOT LOGIN
   //const token = localStorage.getItem('token');
-  console.log(user);
+
   return user.user.role === 0 ? (
     <div className="main">
       <Header />
