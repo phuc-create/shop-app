@@ -12,8 +12,8 @@
   font-size: 30px;
   font-weight: 700;
   letter-spacing: 1px;
-  color: #2d3436;
-  text-shadow: 0px 2px 3px rgba(255, 255, 255, 0.4);
+  color: var(--dark5);
+  text-shadow: 0px 2px 3px var(--txt-light-40);
   text-transform: uppercase;
 }
 .backShop {
@@ -22,7 +22,7 @@
   font-size: 20px;
   text-transform: uppercase;
   text-decoration: underline;
-  color: #2d3436;
+  color: var(--dark5);
 }
 .cart {
   position: relative;
@@ -45,7 +45,7 @@
   padding: 0px 40px;
   width: 100%;
   position: relative;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid var(--txt-dark-20);
 }
 
 .cart .cart__infor table tr {
@@ -54,8 +54,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-top: 1px solid rgba(0, 0, 0, 0.2);
-  box-shadow: 0px 1px 5px rgb(0 0 0 / 20%);
+  border-top: 1px solid var(--txt-dark-20);
+  box-shadow: 0px 1px 5px var(--txt-dark-20);
   border-radius: 5px;
   margin: 10px 0px;
 }
@@ -67,7 +67,7 @@
   padding: 10px 5px;
   font-size: 18px;
   letter-spacing: 2px;
-  color: #2d3436;
+  color: var(--dark5);
   position: relative;
   display: flex;
   justify-content: center;
@@ -75,7 +75,7 @@
 }
 .cart .cart__infor table tr td.cart__v1 {
   width: 10%;
-  color: #ff6b6b;
+  color: var(--money-v1);
   font-size: 25px;
   cursor: pointer;
 }
@@ -130,7 +130,7 @@ td.cart__v3 .v3--single.quantity .qty-set {
 td.cart__v3 .v3--single.quantity .qty-set .quantity-control {
   font-size: 45px;
   cursor: pointer;
-  color: #48dbfb;
+  color: var(--ocean);
 }
 td.cart__v2 img {
   max-width: 90%;
@@ -156,26 +156,26 @@ td.cart__v2 p {
   border-radius: 7px;
   padding: 40px 20px;
   box-shadow: 0px 0px 6px rgb(0 0 0 / 4);
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border-top: 1px solid var(--txt-light-20);
 }
 .cart .cart__ck .__ck--wrap p {
   font-size: 20px;
-  color: #000;
+  color: var(--dark1);
   margin: 30px 0px;
   letter-spacing: 2px;
   text-transform: capitalize;
 }
 .cart .cart__ck .__ck--wrap p:nth-child(2) {
-  border: 2px solid rgba(255, 255, 255, 0.4);
-  color: #000;
+  border: 2px solid var(--txt-light-40);
+  color: var(--dark1);
   font-size: 16px;
-  text-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2);
+  text-shadow: 0px 2px 1px var(--txt-dark-20);
 }
 
 .cart .cart__ck .__ck--wrap a.cart__ck--send {
   padding: 15px;
-  background: #000;
-  color: #fff;
+  background: var(--dark1);
+  color: var(--light1);
   font-size: 18px;
   border-radius: 15px;
   outline: none;
@@ -318,7 +318,7 @@ td.cart__v2 p {
     width: inherit;
     align-items: center;
     justify-content: center;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid var(--txt-dark-20);
   }
   .cart .cart__infor table tr td.cart__v3 {
     width: inherit;

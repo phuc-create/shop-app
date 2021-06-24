@@ -42,7 +42,7 @@
 .main .page .page-l .pl_action a {
   padding: 17px 20px;
   background: #2c3e50;
-  color: #ffffff;
+  color: var(--light1);
   font-size: 20px;
   cursor: pointer;
   border-radius: 5px;
@@ -125,8 +125,8 @@
   letter-spacing: 2px;
   border-radius: 10px;
   padding: 10px 20px;
-  background: #fff;
-  box-shadow: 0px 0px 7px rgb(0 0 0 / 30%);
+  background: var(--light1);
+  box-shadow: 0px 0px 7px var(--txt-dark-30);
 }
 
 .main .category {
@@ -215,7 +215,7 @@
   padding: 14px 25px;
   font-size: 18px;
   background: #34495e;
-  color: #ffffff;
+  color: var(--light1);
   border-radius: 5%;
   letter-spacing: 1px;
   transition: 0.4s;
@@ -249,7 +249,7 @@
 
 .blog-p .ctrl-bl h1 {
   font-size: 25px;
-  color: #ffffff;
+  color: var(--light1);
   font-weight: bold;
 }
 
@@ -276,7 +276,7 @@
   justify-content: space-between;
   padding: 20px;
   flex-direction: column;
-  background: #ffffff;
+  background: var(--light1);
 }
 
 .productGreeting {

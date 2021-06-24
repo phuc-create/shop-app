@@ -91,7 +91,7 @@ function Cart() {
             </div>
           </div>
         ) : (
-          <>
+          <div>
             <h1 className="yourcart">EMPTY</h1>
 
             <h1 className="yourcart">
@@ -99,7 +99,7 @@ function Cart() {
                 shopping now!
               </Link>
             </h1>
-          </>
+          </div>
         )}
       </div>
 

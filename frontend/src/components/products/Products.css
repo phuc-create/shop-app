@@ -54,8 +54,8 @@
   padding: 20px 0;
   font-size: 50px;
   line-height: 70px;
-  color: #fff;
-  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+  color: var(--light1);
+  text-shadow: 0px 0px 10px var(--txt-dark-40);
 }
 
 .products .slide-products .card-slider .crd-l p {
@@ -63,8 +63,8 @@
   font-size: 20px;
   letter-spacing: 1px;
   line-height: 35px;
-  color: #fff;
-  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+  color: var(--light1);
+  text-shadow: 0px 0px 10px var(--txt-dark-40);
 }
 
 .products .slide-products .card-slider .crd-r {
@@ -109,11 +109,11 @@
 .showProducts .filter {
   width: 400px;
   height: auto;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 10px var(--txt-dark-20);
   position: relative;
   margin-left: 20px;
   border-radius: 5px;
-  background: #fff;
+  background: var(--light1);
   padding-bottom: 30px;
 }
 .showProducts .filter .filter-bg-responsive {
@@ -123,10 +123,10 @@
   padding: 5px;
   border-radius: 5px;
   box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.3);
-  background: #ecf0f1;
+  background: var(--light2);
   margin: 20px auto;
   font-size: 20px;
-  color: #2c3e50;
+  color: var(--dark2);
   text-align: center;
   font-weight: 600;
   cursor: pointer;
@@ -142,19 +142,19 @@
   margin-bottom: 5px;
   font-size: 16px;
   letter-spacing: 1px;
-  color: #2c3e50;
+  color: var(--dark2);
   font-weight: 600;
 }
 .filter .ft-search input.search-pr {
   width: 100%;
   font-size: 18px;
-  color: #34495e;
+  color: var(--dark6);
   padding: 10px 5px;
   border: none;
   outline: none;
   border-radius: 5px;
-  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.3);
-  background: #ecf0f1;
+  box-shadow: 0px 0px 5px 1px var(--txt-dark-30);
+  background: var(--light2);
 }
 .filter .filter-ck {
   display: flex;
@@ -169,7 +169,7 @@
 .ft-range .ft-r-title {
   padding: 0px 0px 20px 20px;
   font-size: 30px;
-  color: #2c3e50;
+  color: var(--dark2);
   font-weight: 600;
 }
 .ft-ck-single {
@@ -185,7 +185,7 @@
   --weikit-appearance: none;
   width: 40px;
   height: 40px;
-  background: #333;
+  background: var(--gray2);
   margin-right: 20px;
   outline: none;
   border: none;
@@ -198,7 +198,7 @@
 .ft-ck-single input[type="checkbox"]:after {
   content: "";
   position: absolute;
-  background: #fff;
+  background: var(--light1);
   border-radius: 4px 4px 0px 0px;
   opacity: 0;
 }
@@ -219,10 +219,10 @@
   transition: 0.5s;
 }
 .ft-ck-single input[type="checkbox"]:hover {
-  background: #bdc3c7;
+  background: var(--gray3);
 }
 .ft-ck-single input[type="checkbox"]:checked {
-  background: #e74c3c;
+  background: var(--money-v2);
 }
 .ft-ck-single input[type="checkbox"]:checked:before {
   opacity: 1;
@@ -240,7 +240,7 @@ label.ft-cate-checkbox {
   cursor: pointer;
   user-select: none;
   font-family: "Poppins", sans-serif;
-  color: #2c3e50;
+  color: var(--dark2);
 }
 .ft-c {
   width: 100%;
@@ -259,10 +259,10 @@ label.ft-cate-checkbox {
   text-transform: capitalize;
   outline: none;
   border: none;
-  background: #ecf0f1;
-  color: #2c3e50;
+  background: var(--light2);
+  color: var(--dark2);
   letter-spacing: 1px;
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 5px var(--txt-dark-30);
 }
 .ft-range {
   width: 100%;
@@ -277,9 +277,9 @@ label.ft-cate-checkbox {
   width: 100%;
   height: 15px;
   outline: none;
-  background: #2c3e50;
+  background: var(--dark2);
   border-radius: 10px;
-  box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 1);
+  box-shadow: inset 0px 0px 5px var(--txt-dark-10);
   cursor: pointer;
 }
 
@@ -289,7 +289,7 @@ label.ft-cate-checkbox {
   height: 20px;
   background: #636e72;
   border-radius: 50%;
-  border: 5px solid #e74c3c;
+  border: 5px solid var(--money-v2);
 }
 /* END FILTER PRODUCT UPDATED */
 
@@ -318,13 +318,13 @@ label.ft-cate-checkbox {
   flex-direction: column;
   margin-bottom: 20px;
   cursor: pointer;
-  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.3);
-  color: #2c3e50;
+  box-shadow: 0px 2px 6px var(--txt-dark-30);
+  color: var(--dark2);
 }
 
 .prd .product-s .prdBx .editPrd {
   position: absolute;
-  color: #2c3e50;
+  color: var(--dark2);
   font-size: 30px;
   box-shadow: 0px 0px 10px #000;
   right: 6%;
@@ -335,7 +335,7 @@ label.ft-cate-checkbox {
 }
 
 .prd .product-s .prdBx .editPrd:hover {
-  color: #e84118;
+  color: var(--money-v3);
 }
 
 .prd .product-s .prdBx .img-wraper {
@@ -413,8 +413,8 @@ label.ft-cate-checkbox {
   text-align: center;
   outline: none;
   border: none;
-  background: #3498db;
-  color: #fff;
+  background: var(--ocean2);
+  color: var(--light1);
   border-radius: 10px;
   cursor: pointer;
 }
@@ -440,7 +440,7 @@ label.ft-cate-checkbox {
   width: 40px;
   height: 40px;
   font-size: 20px;
-  border: 1px solid #333;
+  border: 1px solid var(--gray2);
   transition: 0.3s;
   display: flex;
   align-items: center;
@@ -448,8 +448,8 @@ label.ft-cate-checkbox {
   cursor: pointer;
 }
 .accordion-navigation ul li.active {
-  background: #2c3e50;
-  color: #fff;
+  background: var(--dark2);
+  color: var(--light1);
 }
 /* REPONSIVE PRODUCT */
 @media (max-width: 1024px) {
@@ -467,7 +467,7 @@ label.ft-cate-checkbox {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.4);
+    background: var(--txt-dark-40);
     display: none;
   }
   .overlay-mobile.dark {

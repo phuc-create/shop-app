@@ -62,8 +62,7 @@ function Register() {
         <span
           className="show-errLogin"
           style={{ color: "red", marginBottom: "20px", fontSize: "18px" }}
-        >
-        </span>
+        ></span>
       ) : (
         <div></div>
       )}
@@ -95,11 +94,11 @@ function Register() {
         value={re_password}
         onChange={handleValue}
       />
-      <div className="cb-txt">
+      {/* <div className="cb-txt">
         <input type="checkbox" name="check" id="check" />
         <label>I agree to the Terms and Privacy Policy</label>
-        {/* <p>I agree to the Terms and Privacy Policy</p>  */}
-      </div>
+        <p>I agree to the Terms and Privacy Policy</p> 
+      </div> */}
       <div className="btn-action">
         <button type="submit" name="regis">
           Sign Up

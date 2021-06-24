@@ -25,7 +25,7 @@
   left: 0px;
   width: 100%;
   height: 80px;
-  background: linear-gradient(to bottom, #fff, transparent);
+  background: linear-gradient(to bottom, var(--light1), transparent);
 }
 .dtls {
   width: 80%;
@@ -45,7 +45,7 @@
 .rating-stars {
   justify-content: space-around;
   padding: 0px 10px;
-  color: #f1c40f;
+  color: var(--star);
   font-size: 22px;
 }
 
@@ -61,7 +61,7 @@
   height: 100%;
   display: flex;
   flex-direction: column;
-  background: #fff;
+  background: var(--light1);
   border-radius: 5px;
   padding: 20px 20px 0px;
   z-index: 1;
@@ -89,7 +89,7 @@
 
 .dtls .dt-infor .basic p.price {
   font-size: 25px;
-  color: #e84118;
+  color: var(--money-v3);
   font-weight: bold;
   text-transform: capitalize;
   letter-spacing: 1px;
@@ -111,7 +111,7 @@
   justify-content: space-around;
   align-items: center;
   text-align: center;
-  border: 2px solid #00a8ff;
+  border: 2px solid var(--ocean3);
   border-radius: 10px;
   font-weight: bold;
 }
@@ -143,7 +143,7 @@
   justify-content: space-around;
   align-items: center;
   text-align: center;
-  border: 2px solid #00a8ff;
+  border: 2px solid var(--ocean3);
   background: none;
   border-radius: 10px;
   font-weight: bold;
@@ -310,7 +310,7 @@
     position: absolute;
     bottom: 0%;
     z-index: 1;
-    background: #fff;
+    background: var(--light1);
     width: 40px;
     height: 40px;
     border-radius: 50%;

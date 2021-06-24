@@ -26,7 +26,7 @@
   align-items: center;
   background: #ecf0f1;
   border-radius: 5px;
-  box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 2px 2px 4px 2px var(--txt-dark-30);
   margin-left: 20px;
 }
 .user-wrapper .user .user__infor .user__infor--bx {
@@ -42,18 +42,18 @@
   margin-bottom: 10px;
   text-transform: capitalize;
   letter-spacing: 1px;
-  color: #2c3e50;
+  color: var(--dark2);
 }
 .user-wrapper .user .user__infor .user__infor--bx .__infor {
   line-height: 22px;
   margin-bottom: 15px;
   font-size: 17px;
-  color: #2c3e50;
+  color: var(--dark2);
   display: flex;
   flex-direction: column;
 }
 .user-wrapper .user .user__infor .user__infor--bx .__infor.fm__input {
-  border: 1px solid #bdc3c7;
+  border: 1px solid var(--gray3);
   padding: 10px;
   border-radius: 5px;
 }
@@ -73,11 +73,11 @@
   width: 100%;
   padding: 10px;
   letter-spacing: 1px;
-  background: #333;
+  background: var(--gray2);
   border: none;
   outline: none;
   cursor: pointer;
-  color: #fff;
+  color: var(--light1);
   font-size: 18px;
   border-radius: 5px;
 }
@@ -94,16 +94,16 @@
   text-align: left;
   font-size: 25px;
   letter-spacing: 1px;
-  color: #2c3e50;
+  color: var(--dark2);
   padding-bottom: 20px;
 }
 .user-wrapper .user .user__orders table tr.__orders--view {
   display: flex;
   flex-direction: column;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
-  border-right: 1px solid rgba(0, 0, 0, 0.1);
+  border-top: 1px solid var(--txt-dark-10);
+  border-right: 1px solid var(--txt-dark-10);
   border-radius: 5px;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 2px 5px var(--txt-dark-30);
   margin-bottom: 20px;
   padding: 10px 20px;
 }
@@ -118,10 +118,10 @@
   align-items: center;
 }
 .user-wrapper .user .user__orders table tr.__orders--view td .__order--result {
-  color: #c0392b;
+  color: var(--tomato2);
 }
 .user-wrapper .user .user__orders table tr.__orders--view td .__order--status {
-  color: #2ecc71;
+  color: var(--green);
 }
 .user-wrapper
   .user
@@ -133,8 +133,8 @@
   width: 100%;
   height: auto;
   padding: 8px;
-  background: linear-gradient(to left, #34495e, #434343);
-  color: #fff;
+  background: var(--bg-linear);
+  color: var(--light1);
   font-size: 18px;
   outline: none;
   border: none;
@@ -153,12 +153,12 @@
 }
 .user-wrapper .order-details.overlay {
   z-index: unset;
-  background: rgba(0, 0, 0, 0.3);
+  background: var(--txt-dark-30);
 }
 .user-wrapper .order-details .details {
   min-width: 750px;
   height: 100%;
-  background: #fff;
+  background: var(--light1);
   position: absolute;
   right: -190%;
   top: 0;
@@ -186,7 +186,7 @@
   font-size: 17px;
 }
 .user-wrapper .order-details .details .order-date .order-status .__status {
-  color: #2ecc71;
+  color: var(--green);
 }
 .user-wrapper .order-details .details .products--list {
   width: 100%;
@@ -194,12 +194,12 @@
   flex-direction: column;
   position: relative;
   border-radius: 7px;
-  box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 0px 7px var(--txt-dark-40);
   padding: 5px 15px 15px 15px;
 }
 .user-wrapper .order-details .details .products--list .order--header {
   width: 100%;
-  border-bottom: 1px solid #333;
+  border-bottom: 1px solid var(--gray2);
   font-size: 22px;
   margin-bottom: 10px;
 }
@@ -268,7 +268,7 @@
   .__list-np
   span.lprice {
   font-size: 16px;
-  color: #34495e;
+  color: var(--dark6);
 }
 .user-wrapper
   .order-details
@@ -301,7 +301,7 @@
   .__list-qty
   p.-qty-txt {
   font-size: 16px;
-  color: #34495e;
+  color: var(--dark6);
 }
 .user-wrapper
   .order-details
@@ -324,7 +324,7 @@
   font-size: 18px;
   font-weight: 600;
   margin-bottom: 10px;
-  color: #e84118;
+  color: var(--money-v3);
 }
 .user-wrapper
   .order-details
@@ -334,14 +334,14 @@
   .__list--subtotal
   .-subtt-txt {
   font-size: 16px;
-  color: #34495e;
+  color: var(--dark6);
 }
 .user-wrapper .order-details .details .order-total {
   position: relative;
   width: 100%;
   height: auto;
   border-radius: 7px;
-  box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 0px 7px var(--txt-dark-40);
   margin-top: 20px;
   padding: 15px;
   display: flex;
@@ -362,7 +362,7 @@
 }
 .user-wrapper .order-details .details .order-total .r-f-order h1 {
   font-size: 25px;
-  color: #e84118;
+  color: var(--money-v3);
   font-weight: 600;
 }
 .user-wrapper .order-details .details.active {
@@ -374,7 +374,7 @@
   padding: 10px;
   margin-top: 20px;
   border-radius: 7px;
-  box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 0px 7px var(--txt-dark-40);
 }
 @media (max-width: 1024px) {
   .user-wrapper .user .user__infor {
@@ -544,7 +544,7 @@
   }
   .user-wrapper .order-details .details .products--list .__list-single {
     align-items: center;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid var(--txt-dark-10);
   }
   .user-wrapper
     .order-details

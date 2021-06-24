@@ -16,7 +16,7 @@
 }
 .checkout .ck__left {
   width: 55%;
-  background: #ecf0f1;
+  background: var(--light3);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -30,9 +30,9 @@
   justify-content: space-evenly;
   align-items: flex-start;
   flex-direction: column;
-  background: #fff;
+  background: var(--light1);
   border-radius: 5px;
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 5px var(--txt-dark-10);
 }
 .checkout .ck__left .ck-form-wrap h1 {
   font-size: 35px;
@@ -64,14 +64,14 @@
   outline: none;
   font-size: 16px;
   border-radius: 5px;
-  border: 2px solid #bdc3c7;
+  border: 2px solid var(--gray3);
 }
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
 }
 .checkout .ck__left .ck-form-wrap .input__wrap .fm__input input:focus {
-  border: 2px solid #9b59b6;
+  border: 2px solid var(--purple2);
 }
 .checkout .ck__left .ck-form-wrap .fm__input.select {
   position: relative;
@@ -87,7 +87,7 @@ input::-webkit-inner-spin-button {
   padding: 8px 5px;
   font-size: 16px;
   text-transform: capitalize;
-  border: 2px solid #bdc3c7;
+  border: 2px solid var(--gray3);
   border-radius: 5px;
   outline: none;
 }
@@ -103,7 +103,7 @@ input::-webkit-inner-spin-button {
   height: 100px;
   resize: none;
   padding: 5px;
-  border: 2px solid #bdc3c7;
+  border: 2px solid var(--gray3);
   border-radius: 5px;
   outline: none;
 }
@@ -124,7 +124,7 @@ input::-webkit-inner-spin-button {
 .checkout .ck__left .ck-form-wrap .ck-option .option .op-check {
   padding: 5px 0;
   width: 100%;
-  border: 2px solid #bdc3c7;
+  border: 2px solid var(--gray3);
   border-radius: 5px;
   display: flex;
   justify-content: flex-start;
@@ -155,7 +155,7 @@ input::-webkit-inner-spin-button {
   position: relative;
   width: 25px;
   height: 25px;
-  border: 2px solid #d8e4e2;
+  border: 2px solid var(--light2);
   padding: 2px;
   margin-right: 10px;
   border-radius: 50%;
@@ -170,14 +170,14 @@ input::-webkit-inner-spin-button {
   width: 65%;
   height: 65%;
   display: block;
-  background: #2c3e50;
+  background: var(--dark2);
   border-radius: 50%;
   transition: 0.3s;
 }
 .checkout .ck__left .ck-form-wrap .ck-option .option .bx-content {
-  border-left: 2px solid #d8e4e2;
-  border-right: 2px solid #d8e4e2;
-  border-bottom: 2px solid #d8e4e2;
+  border-left: 2px solid var(--light2);
+  border-right: 2px solid var(--light2);
+  border-bottom: 2px solid var(--light2);
   width: 100%;
   position: relative;
   overflow: hidden;
@@ -197,8 +197,8 @@ input::-webkit-inner-spin-button {
   padding: 10px 5px;
   text-align: center;
   font-size: 20px;
-  background: #2c3e50;
-  color: #ecf0f1;
+  background: var(--dark2);
+  color: var(--light3);
   outline: none;
   border: none;
   border-radius: 5px;
@@ -209,7 +209,7 @@ input::-webkit-inner-spin-button {
   width: 45%;
   display: inline-block;
   position: relative;
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 5px var(--txt-dark-10);
 }
 .checkout .ck__right h1 {
   font-size: 35px;
@@ -235,7 +235,7 @@ input::-webkit-inner-spin-button {
   margin-bottom: 5px;
   padding: 3px 2px;
   border-radius: 5px;
-  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 1px 5px var(--txt-dark-30);
   width: 100%;
   position: relative;
   display: flex;
@@ -285,11 +285,11 @@ input::-webkit-inner-spin-button {
   justify-content: space-evenly;
 }
 .checkout .ck__right .cart .cart-single .cart-price .line-thr {
-  color: #e74c3c;
+  color: var(--money-v2);
   font-size: 20px;
 }
 .checkout .ck__right .cart .cart-single .cart-price .line-hidden {
-  color: #34495e;
+  color: var(--dark6);
   font-size: 17px;
 }
 .checkout .ck__right .order-step {
@@ -305,7 +305,7 @@ input::-webkit-inner-spin-button {
 }
 .checkout .ck__right .order-step .total.show-total {
   font-weight: 500;
-  color: #e74c3c;
+  color: var(--money-v2);
 }
 .checkout
   .ck__right
@@ -414,7 +414,7 @@ input::-webkit-inner-spin-button {
     .infor--cart
     .sub-pr-show-mobile {
     display: block;
-    color: #e74c3c;
+    color: var(--money-v2);
   }
   .checkout .ck__right .cart .cart-single .cart--infor-left .infor--cart {
     width: 60%;

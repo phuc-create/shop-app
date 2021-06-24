@@ -1,17 +1,61 @@
-@import url("https://fonts.googleapis.com/css2?family=KoHo:ital,wght@0,400;0,500;0,600;0,700;1,500&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Hind&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap");
 @import url("../../frontend/src/components/main/Main.css");
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Audiowide&display=swap");
+:root {
+  --color-logo: linear-gradient(to left, #000000, #434343);
+  --bg-linear: linear-gradient(to left, #34495e, #434343);
+  --light1: #ffffff;
+  --light2: #e0eaee;
+  --light3: #f7f8f9;
+
+  --dark1: #000020;
+  --dark2: #2c3e50;
+  --dark3: #2a4853;
+  --dark4: #1a2e35;
+  --dark5: #2d3436;
+  --dark6: #34495e;
+  --gray1: #999999;
+  --gray2: #333;
+  --gray3: #bdc3c7;
+  --money-v1: #ff6b6b;
+  --money-v2: #e74c3c;
+  --money-v3: #e84118;
+  --tomato: #eb2f06;
+  --tomato2: #c0392b;
+  --ocean: #48dbfb;
+  --ocean2: #3498db;
+  --ocean3: #00a8ff;
+  --green: #2ecc71;
+  --green2: #2ebf91;
+  --green3: #1abc9c;
+  --purple: #8360c3;
+  --purple2: #9b59b6;
+  --star: #f1c40f;
+  --shadow-txt: 0px 0px 10px #000;
+  --txt-light-20: rgba(255, 255, 255, 0.2);
+  --txt-light-40: rgba(255, 255, 255, 0.4);
+  --txt-dark-10: rgba(0, 0, 0, 0.1);
+  --txt-dark-20: rgba(0, 0, 0, 0.2);
+  --txt-dark-30: rgba(0, 0, 0, 0.3);
+  --txt-dark-40: rgba(0, 0, 0, 0.4);
+  --shadow-red: 0px 0px 10px var(--tomato);
+  --background-image-button: linear-gradient(
+    to right,
+    #16222a 0%,
+    #3a6073 51%,
+    #16222a 100%
+  );
+  --box-shadow-dark-inset: 0 1px 2px rgba(0, 0, 0, 0.05),
+    inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
+}
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* font-family: "KoHo", sans-serif;
-  font-family: "ZCOOL KuaiLe", cursive; */
   font-family: "Poppins", sans-serif;
   scroll-behavior: smooth;
 }
