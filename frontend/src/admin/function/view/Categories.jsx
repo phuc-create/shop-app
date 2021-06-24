@@ -74,9 +74,7 @@ function Categories() {
         <thead>
           <tr className="banner-fixed">
             <td>ID</td>
-
             <td>Name</td>
-
             <td>History</td>
             <td>Actions</td>
           </tr>

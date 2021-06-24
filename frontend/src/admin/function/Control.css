@@ -16,9 +16,9 @@
 }
 .panel-prs .tb-prds tr {
   width: 100%;
-  border: 1px solid var(--txt-dark-10);
+  border: 1px solid rgba(0, 0, 0, 0.1);
   text-align: center;
-  box-shadow: 0px 1px 5px var(--txt-dark-20);
+  box-shadow: 0px 1px 5px rgb(0 0 0 / 20%);
   margin-bottom: 20px;
   height: auto;
   display: flex;
@@ -37,15 +37,15 @@
   border: none;
   outline: none;
   cursor: pointer;
-  background: var(--ocean2);
-  color: var(--light1);
+  background: #3498db;
+  color: #fff;
   letter-spacing: 1px;
   border-radius: 5px;
-  box-shadow: 0px 0px 5px var(--txt-dark-10);
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
   margin-right: 10px;
 }
 .panel-prs .tb-prds tr td.prd-control .prd-delete {
-  background: var(--money-v2);
+  background: #e74c3c;
 }
 
 .accordion-navigation {
@@ -64,7 +64,7 @@
   width: 40px;
   height: 40px;
   font-size: 20px;
-  border: 1px solid var(--gray2);
+  border: 1px solid #333;
   transition: 0.3s;
   display: flex;
   align-items: center;
@@ -72,8 +72,8 @@
   cursor: pointer;
 }
 .accordion-navigation ul li.active {
-  background: var(--dark2);
-  color: var(--ligh1);
+  background: #2c3e50;
+  color: #fff;
 }
 form.add-p {
   position: relative;
@@ -111,10 +111,10 @@ form.add-p input[type="submit"] {
   border: none;
   outline: none;
   cursor: pointer;
-  color: var(--ligh1);
+  color: #fff;
   font-weight: 500;
   text-transform: uppercase;
-  background: var(--bg-linear);
+  background: linear-gradient(to left, #34495e, #434343);
 }
 
 .order-details {
@@ -128,12 +128,12 @@ form.add-p input[type="submit"] {
 }
 .order-details.overlay {
   z-index: unset;
-  background: var(--txt-dark-30);
+  background: rgba(0, 0, 0, 0.3);
 }
 .order-details .details {
   min-width: 750px;
   height: 100%;
-  background: var(--ligh1);
+  background: #fff;
   position: absolute;
   right: -100%;
   top: 0;
@@ -169,7 +169,7 @@ form.add-p input[type="submit"] {
 .handle-change-status select {
   padding: 10px;
   width: 40%;
-  border: 1px solid var(--gray2);
+  border: 1px solid #333;
   outline: none;
   margin-right: 20px;
   font-size: 18px;
@@ -178,12 +178,12 @@ form.add-p input[type="submit"] {
 .handle-change-status button[type="submit"] {
   padding: 10px;
   width: 40%;
-  border: 1px solid var(--gray2);
+  border: 1px solid #333;
   outline: none;
   margin-right: 20px;
   font-size: 18px;
-  color: var(--ligh1);
-  background: var(--bg-linear);
+  color: #fff;
+  background: linear-gradient(to left, #34495e, #434343);
   cursor: pointer;
 }
 .order-details .details .order-date {
@@ -196,7 +196,7 @@ form.add-p input[type="submit"] {
   font-size: 17px;
 }
 .order-details .details .order-date .order-status .__status {
-  color: var(--green);
+  color: #2ecc71;
 }
 .order-details .details .products--list {
   width: 100%;
@@ -204,12 +204,12 @@ form.add-p input[type="submit"] {
   flex-direction: column;
   position: relative;
   border-radius: 7px;
-  box-shadow: 0px 0px 7px var(--txt-dark-40);
+  box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.4);
   padding: 5px 15px 15px 15px;
 }
 .order-details .details .products--list .order--header {
   width: 100%;
-  border-bottom: 1px solid var(--gray2);
+  border-bottom: 1px solid #333;
   font-size: 22px;
   margin-bottom: 10px;
 }
@@ -258,7 +258,7 @@ form.add-p input[type="submit"] {
   font-size: 18px;
   letter-spacing: 1px;
   font-weight: 600;
-  color: var(--dark4);
+  color: #1a1a1a;
 }
 
 .order-details
@@ -269,7 +269,7 @@ form.add-p input[type="submit"] {
   .__list-np
   span.lprice {
   font-size: 16px;
-  color: var(--dark6);
+  color: #34495e;
 }
 
 .order-details .details .products--list .__list-single .__list-qty {
@@ -283,12 +283,12 @@ form.add-p input[type="submit"] {
   font-size: 18px;
   margin-bottom: 10px;
   font-weight: 600;
-  color: var(--dark4);
+  color: #1a1a1a;
 }
 
 .order-details .details .products--list .__list-single .__list-qty p.-qty-txt {
   font-size: 16px;
-  color: var(--dark6);
+  color: #34495e;
 }
 
 .order-details .details .products--list .__list-single .__list--subtotal {
@@ -307,7 +307,7 @@ form.add-p input[type="submit"] {
   font-size: 18px;
   font-weight: 600;
   margin-bottom: 10px;
-  color: var(--dark4);
+  color: #1a1a1a;
 }
 
 .order-details
@@ -317,14 +317,14 @@ form.add-p input[type="submit"] {
   .__list--subtotal
   .-subtt-txt {
   font-size: 16px;
-  color: var(--dark6);
+  color: #34495e;
 }
 .order-details .details .order-total {
   position: relative;
   width: 100%;
   height: auto;
   border-radius: 7px;
-  box-shadow: 0px 0px 7px var(--txt-dark-40);
+  box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.4);
   margin-top: 20px;
   padding: 15px;
   display: flex;
@@ -337,15 +337,15 @@ form.add-p input[type="submit"] {
 }
 .order-details .details .order-total .l-f-order p {
   padding: 5px 0;
-  color: var(--dark3);
+  color: #4b6584;
 }
 .order-details .details .order-total .l-f-order p span {
   font-weight: 600;
-  color: var(--dark4);
+  color: #1a1a1a;
 }
 .order-details .details .order-total .r-f-order h1 {
   font-size: 25px;
-  color: var(--money-v3);
+  color: #e84118;
   font-weight: 600;
 }
 .order-details .details.active {
@@ -358,5 +358,5 @@ form.add-p input[type="submit"] {
   padding: 10px;
   margin-top: 10px;
   border-radius: 7px;
-  box-shadow: 0px 0px 7px var(--txt-dark-30);
+  box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.3);
 }

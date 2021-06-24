@@ -1,10 +1,13 @@
 import React, { useState } from "react";
-import "./Control.css";
+import "../Control.css";
 import { useSelector, useDispatch } from "react-redux";
-import { Url } from "../../components/UrlServer";
-import { deleteProductById } from "../../redux/actions/productActions";
+import { Url } from "../../../components/UrlServer";
+
 import { AiOutlineCloseSquare } from "react-icons/ai";
-import { updateProductById } from "../../redux/actions/productActions";
+import {
+  deleteProductById,
+  updateProductById,
+} from "../../../redux/actions/productActions";
 
 function Products() {
   const [showDetails, setShowDetails] = useState(false);

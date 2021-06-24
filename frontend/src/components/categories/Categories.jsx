@@ -23,7 +23,7 @@ function Categories() {
         items={3}
         responsive={responsive}
         margin={20}
-        loop={true}
+        loop={false}
         autoplay={true}
         className="c_wrap"
       >

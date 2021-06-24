@@ -2,12 +2,11 @@ import React from "react";
 import { Link } from "react-router-dom";
 import at1 from "../../img/at2.png";
 import at2 from "../../img/at8.jpg";
-import at3 from "../../img/at3.jpg";
+import at3 from "../../img/at33.jpg";
 import at4 from "../../img/at9.png";
 import at5 from "../../img/at10.png";
 import "./Layout.css";
 function Page() {
-
   return (
     <div className="hero">
       <div className="hero-overlay-temp"></div>
