@@ -160,7 +160,7 @@
   height: 100%;
   background: var(--light1);
   position: absolute;
-  right: -190%;
+  right: -120%;
   top: 0;
   transition: 0.4s;
   padding: 25px;
@@ -398,7 +398,8 @@
     width: 100%;
   }
   .user-wrapper .order-details .details {
-    min-width: 100%;
+    width: 100%;
+    min-width: unset;
     padding: 10px;
   }
 }
