@@ -9,7 +9,7 @@ import "../admin/style.css";
 import Dashboard from "./dashboard/Dashboard";
 import AddCate from "./function/AddCate";
 import AddProduct from "./function/AddProduct";
-import Products from "./function/view/Products";
+import Products from "./function/categories/Products";
 import Auth from "../components/auth/Auth";
 import { useSelector, useDispatch } from "react-redux";
 import ProtectedRoute from "../protected-route/ProtectedRoute";
@@ -17,7 +17,7 @@ import { getAllProducts } from "../redux/actions/productActions";
 import { getAllCategories } from "../redux/actions/categoryActions";
 import { getOrdersAdmin } from "../redux/actions/orderActions";
 import Orders from "./function/orders/Orders";
-import Categories from "./function/view/Categories";
+import Categories from "./function/categories/Categories";
 
 function Admin() {
   let { path, url } = useRouteMatch();
@@ -37,7 +37,11 @@ function Admin() {
         </h1>
         <Switch>
           <Route path="/logout" exact component={Auth} />
-          <Route path={`${path}/products`} exact component={Products} />
+          <ProtectedRoute
+            path={`${path}/products`}
+            exact
+            component={Products}
+          />
           <ProtectedRoute
             path={`${path}/new-product`}
             exact

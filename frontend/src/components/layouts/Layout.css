@@ -74,7 +74,7 @@ nav .option-log a {
 }
 
 nav .option-log a:nth-child(2) {
-  background: var(--dark3);
+  background: var(--color-logo);
   color: var(--light1);
   border-radius: 5px;
 }

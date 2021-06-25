@@ -23,8 +23,7 @@ function Categories() {
         items={3}
         responsive={responsive}
         margin={20}
-        loop={false}
-        autoplay={true}
+        loop={true}
         className="c_wrap"
       >
         <div className="item box-c">

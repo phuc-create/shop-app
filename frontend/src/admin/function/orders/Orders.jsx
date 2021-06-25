@@ -16,7 +16,6 @@ const Orders = () => {
   const { status } = st;
   const dispatch = useDispatch();
   const orders = useSelector((state) => state.orders);
-  console.log(orders);
   //edit panigation for product panel
   const [page, setPage] = useState({
     currentPage: Number(1),
@@ -70,7 +69,6 @@ const Orders = () => {
   const handleUpdateStatus = (e, id) => {
     e.preventDefault();
     setSt({ status: "new" });
-    console.log(status, id);
     dispatch(updateOrderStatus({ status, id }));
   };
   return (

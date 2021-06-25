@@ -116,7 +116,7 @@ function Products() {
                         width="100px"
                         height="100px"
                         src={`${Url}/${product.productImg}`}
-                        alt={`${Url}/${product.productImg}`}
+                        alt="productimg"
                       />
                     </td>
                     <td>{product.name}</td>
