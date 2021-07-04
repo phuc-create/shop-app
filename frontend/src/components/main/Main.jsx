@@ -13,7 +13,6 @@ import { Redirect } from "react-router-dom";
 import { getOrdersUser } from "../../redux/actions/orderActions";
 function Main() {
   const dispatch = useDispatch();
-  const user = useSelector((state) => state.user);
   //GET ALL PRODUCT
   //GET ALL CATEGORIES WHEN LOGIN TO SHOW
   useEffect(() => {
@@ -21,7 +20,7 @@ function Main() {
     dispatch(getAllCategories());
     dispatch(getOrdersUser());
   }, [dispatch]);
-
+  const user = useSelector((state) => state.user);
   //CHECK USER LOGGON AND REDIRECT TO LOGIN PAGE IF NOT LOGIN
   //const token = localStorage.getItem('token');
 

@@ -43,9 +43,6 @@ function Header() {
             <Link to="/about">About</Link>
           </li>
           <li>
-            <Link to="/#footer">Contact</Link>
-          </li>
-          <li>
             <Link to="/cart">
               Cart[{user.user !== null ? user.user.cartItems.length : "X"}]
             </Link>

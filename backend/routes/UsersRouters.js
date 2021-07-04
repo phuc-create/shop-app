@@ -16,17 +16,22 @@ const createRefreshToken = (user) =>
 //register account
 router.route("/register").post(async (req, res) => {
   try {
-    const { username, email, password } = req.body;
+    const { username, email, password, re_password } = req.body;
     const emailCheck = await Users.findOne({ email });
-    // if (!username || !password || !email)
-    //   return res.status(400).json({
-    //     success: false,
-    //     message: "username,email and password is required!",
-    //   });
+    if (!username || !password || !email || !re_password)
+      return res.status(400).json({
+        success: false,
+        message: "Please check the information again!",
+      });
     if (password.length < 6)
       return res.status(400).json({
         success: false,
-        message: "At least 8 characters for password",
+        message: "At least 8 characters for password!",
+      });
+    if (password !== re_password)
+      return res.status(400).json({
+        success: false,
+        message: "Confirm password does not match!",
       });
     if (emailCheck)
       return res
@@ -78,27 +83,29 @@ router.route("/login").post(async (req, res) => {
     if (email === "" || password === "") {
       return res.status(400).json({
         success: false,
-        message: "Email and password required",
+        message: "Email and password required !",
       });
     }
-    const checkEmail = await Users.findOne({ email: email });
-    if (!checkEmail) {
+    const user = await Users.findOne({ email: email });
+    if (!user) {
       return res.status(400).json({
         success: false,
-        message: "Your email or password does not match",
+        message: "Your email or password does not match!",
       });
     }
-    const match = await bcrypt.compare(password, checkEmail.password);
+    const match = await bcrypt.compare(password, user.password);
     if (!match) {
       return res.status(400).json({
         success: false,
-        message: "Your email or password does not match",
+        message: "Your email or password does not match!",
       });
     }
 
-    const accessToken = createAccessToken({ id: checkEmail._id });
-    const refreshToken = createRefreshToken({ id: checkEmail._id });
-    return res.status(200).json({ success: true, accessToken, refreshToken });
+    const accessToken = createAccessToken({ id: user._id });
+    const refreshToken = createRefreshToken({ id: user._id });
+    return res
+      .status(200)
+      .json({ success: true, user, accessToken, refreshToken });
   } catch (error) {
     return res.status(400).json({ success: false, message: error.message });
   }
@@ -136,60 +143,62 @@ router.route("/add-to-cart").post(middlewareLogin, async (req, res) => {
         .status(400)
         .json({ success: false, message: "User not found" });
     if (user) {
-      const isProductAdded = user.cartItems.find(
-        (pr) => pr.productId == product._id
-      );
-      if (isProductAdded) {
-        // Users.findOneAndUpdate(
-        //   { _id: req.id.id, "cartItems.productId": isProductAdded.productId },
-        //   {
-        //     $set: {
-        //       "cartItems.$": {
-        //         productId: isProductAdded.productId,
-        //         name: isProductAdded.name,
-        //         productImg: isProductAdded.productImg,
-        //         price: isProductAdded.price,
-        //         quantity: isProductAdded.quantity + 1,
-        //       },
-        //     },
-        //   },
-        //   { new: true }
-        // ).exec((error, cart) => {
-        //   if (error)
-        //     return res
-        //       .status(400)
-        //       .json({ success: false, message: error.message });
-        //   if (cart)
-        //     return res.status(200).json({ success: true, message: cart });
-        // });
-        return res.status(400).json({
-          success: true,
-          message: user,
-          text: "Product Added To Cart!",
-        });
-      } else {
-        Users.findByIdAndUpdate(
-          { _id: req.id.id },
-          {
-            $push: {
-              cartItems: {
-                productId: product._id,
-                name: name,
-                productImg: productImg,
-                price: price,
-              },
+      // const isProductAdded = user.cartItems.find(
+      //   (pr) => pr.productId == product._id
+      // );
+      // if (isProductAdded) {
+      //   // Users.findOneAndUpdate(
+      //   //   { _id: req.id.id, "cartItems.productId": isProductAdded.productId },
+      //   //   {
+      //   //     $set: {
+      //   //       "cartItems.$": {
+      //   //         productId: isProductAdded.productId,
+      //   //         name: isProductAdded.name,
+      //   //         productImg: isProductAdded.productImg,
+      //   //         price: isProductAdded.price,
+      //   //         quantity: isProductAdded.quantity + 1,
+      //   //       },
+      //   //     },
+      //   //   },
+      //   //   { new: true }
+      //   // ).exec((error, cart) => {
+      //   //   if (error)
+      //   //     return res
+      //   //       .status(400)
+      //   //       .json({ success: false, message: error.message });
+      //   //   if (cart)
+      //   //     return res.status(200).json({ success: true, message: cart });
+      //   // });
+      //   return res.status(400).json({
+      //     success: true,
+      //     message: user,
+      //     text: "Product Added To Cart!",
+      //   });
+      // } else {
+      Users.findByIdAndUpdate(
+        { _id: req.id.id },
+        {
+          $push: {
+            cartItems: {
+              productId: product._id,
+              name: name,
+              productImg: productImg,
+              price: price,
             },
           },
-          { new: true }
-        ).exec((error, cart) => {
-          if (error)
-            return res
-              .status(400)
-              .json({ success: false, message: error.message });
-          if (cart)
-            return res.status(200).json({ success: true, message: cart });
-        });
-      }
+        },
+        { new: true }
+      ).exec((error, cart) => {
+        if (error)
+          return res
+            .status(400)
+            .json({ success: false, message: error.message });
+        if (cart)
+          return res
+            .status(200)
+            .json({ success: true, message: cart, txt: "Added to Cart" });
+      });
+      //}
     }
   });
 });

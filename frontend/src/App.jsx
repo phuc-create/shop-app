@@ -15,6 +15,7 @@ import Cart from "./components/cart/Cart";
 import Checkout from "./components/checkout/Checkout";
 import User from "./components/user/User";
 import ScrollToTop from "./protected-route/ScrollToTop";
+import Loading from "./components/layouts/Loading";
 
 function App() {
   const dispatch = useDispatch();
@@ -32,6 +33,7 @@ function App() {
           <Route path="/shop" component={ProductPage} />
           <Route path="/about" component={AboutPage} />
           <Route path="/details/:productId" component={Details} />
+          <Route exact path="/load" component={Loading} />
           <ProtectedRoute path="/cart" component={Cart} />
           <ProtectedRoute path="/checkout" component={Checkout} />
           <ProtectedRoute path="/user" component={User} />

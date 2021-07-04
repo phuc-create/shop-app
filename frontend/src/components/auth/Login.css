@@ -194,6 +194,9 @@
   }
 }
 @media (max-width: 750px) {
+  .login {
+    padding: 0px 2px;
+  }
   .login .main__login .l-l {
     width: 100%;
   }

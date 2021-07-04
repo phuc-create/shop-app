@@ -6,6 +6,7 @@ import Header from "../layouts/Header";
 import { Url } from "../../components/UrlServer";
 import "./Checkout.css";
 import { checkCheckoutUser } from "../../redux/actions/orderActions";
+import Loading from "../layouts/Loading";
 
 const Checkout = () => {
   const dispatch = useDispatch();
@@ -69,21 +70,18 @@ const Checkout = () => {
     }
     console.log(prepareOrder);
     dispatch(checkCheckoutUser(prepareOrder));
-    toast.success("Payment processing");
-    setTimeout(() => {
-      toast.success("Payment completely");
-    }, 2000);
-    setTimeout(() => {
-      window.location = "/";
-    }, 3200);
   };
   const formatter = new Intl.NumberFormat("en-US", {
     style: "currency",
     currency: "USD",
     minimumFractionDigits: 2,
   });
+  if (user.txt) {
+    toast.success(user.txt);
+  }
   return (
     <div className="main">
+      {user.isLoading ? <Loading /> : <div></div>}
       <Header />
       <ToastContainer />
       <div className="checkout">

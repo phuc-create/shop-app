@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { toast } from "react-toastify";
+import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import { SiGoogle, SiInstagram, SiTwitter } from "react-icons/si";
 import { FaFacebookF } from "react-icons/fa";
@@ -9,29 +8,19 @@ import { checkLoginUser } from "../../redux/actions/userActions";
 
 function Login() {
   const dispatch = useDispatch();
-  //get user from useSelector
-  const user = useSelector((state) => state.user);
-  //check input
   const [login, setLogin] = useState({
     email: "",
     password: "",
   });
-  const { email, password } = login;
   const handleLogin = (e) => {
     e.preventDefault();
     dispatch(checkLoginUser(login));
-    if (!email || !password) {
-      toast.error("Please checkout your information!!!");
-      return false;
-    } else if (password.length < 8) {
-      toast.error("At least 8 characters for password!!!");
-      return false;
-    }
-    if (user.err !== null) {
-      toast.error(user.err.message);
-      return false;
-    }
+    setLogin({
+      email: "",
+      password: "",
+    });
   };
+
   return (
     <form className="l-l" onSubmit={handleLogin}>
       <h1>B-shop</h1>
@@ -51,19 +40,8 @@ function Login() {
         </Link>
       </div>
       <p>Login</p>
-      {/* {user.err !== null ? (
-        <span
-          className="show-errLogin"
-          style={{ color: "red", marginBottom: "20px", fontSize: "18px" }}
-        >
-          
-          {user.err.message}!
-        </span>
-      ) : (
-        <div></div>
-      )} */}
-
       <input
+        value={login.email}
         type="email"
         placeholder="Your Email"
         onChange={(e) => {
@@ -72,6 +50,7 @@ function Login() {
       />
 
       <input
+        value={login.password}
         type="password"
         placeholder="Password"
         onChange={(e) => {
