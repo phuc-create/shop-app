@@ -12,11 +12,11 @@ import ProductsRecommend from "../page/ProductsRecommend";
 import { checkAddToCart } from "../../../redux/actions/userActions";
 import { getAllProducts } from "../../../redux/actions/productActions";
 import { getAllCategories } from "../../../redux/actions/categoryActions";
+import Loading from "../../layouts/Loading";
 
 function Details() {
   const user = useSelector((state) => state.user);
   const products = useSelector((state) => state.products);
-
   const dispatch = useDispatch();
   const { productId } = useParams();
   const [details, setDetails] = useState({});
@@ -26,15 +26,14 @@ function Details() {
     const checkCart = user.user.cartItems.filter(
       (x) => x.productId === product._id
     );
-    if (checkCart.length >= 1) alert("Product Added To Cart!!!");
+    if (checkCart.length >= 1) toast.error("Product Already In Cart!!!");
     else {
       dispatch(checkAddToCart(product));
-      setTimeout(() => {
-        toast.success("Added to Cart");
-      }, 2000);
     }
   };
-
+  if (user.txt) {
+    toast.success(user.txt);
+  }
   //currentcy
   const formatter = new Intl.NumberFormat("en-US", {
     style: "currency",
@@ -55,6 +54,7 @@ function Details() {
 
   return (
     <div className="main">
+      {user.isLoading ? <Loading /> : <div></div>}
       <Header />
       <ToastContainer />
       {details !== null || details !== undefined ? (

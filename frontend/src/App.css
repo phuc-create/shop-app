@@ -76,3 +76,28 @@ body {
   width: 100%;
   padding: 20px 0px;
 }
+.loading-page {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: rgba(0, 0, 0, 0.5);
+}
+.loading-page .gif-cat-loading {
+  width: 200px;
+  height: 200px;
+}
+.loading-page .on-load-pleaseWait {
+  font-size: 20px;
+  margin-top: 20px;
+  font-weight: 600;
+  color: #ffffff;
+}

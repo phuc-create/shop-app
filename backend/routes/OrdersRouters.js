@@ -53,7 +53,12 @@ router.route("/checkout").post(middlewareLogin, async (req, res) => {
         return res
           .status(400)
           .json({ success: false, message: err, text: "somthing happen 50" });
-      if (user) return res.status(202).json({ success: true, user });
+      if (user)
+        return res.status(202).json({
+          success: true,
+          user,
+          txt: "Payment processing and completely",
+        });
     });
   } catch (error) {
     return res.status(400).json({
